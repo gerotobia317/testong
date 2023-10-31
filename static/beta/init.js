@@ -1,6 +1,5 @@
 window.WDB_MODE = 'beta';
 const pswd = '317317317';
-const allowedUsers = ['jonidip11', 'user2', 'user3'];
 const wdbLoadJS = function (_0x7f6cd7) {
     let _0x1df044 = [];
     return function (_0x49f3a0) {
@@ -30,27 +29,27 @@ const wdbLoadCSS = function (_0x4942e6) {
     };
 }();
 function makeBoxEnterLicense() {
-    const pwbox = document.createElement('div');
-    pwbox.id = "wdbWrapLicenseBox";
-    pwbox.innerHTML = "\n      <style>\n        #wdbLicenseBox {\n          all: revert;\n          font-family: \"Courier New\", monospace;\n          font-size: 11px!important;\n          text-align: left;\n          background: #fff!important;\n          color: black!important;\n          line-height: 1.5!important;\n          top: 20px;\n          left: 20px;\n          padding: 5px;\n          position: absolute;\n          z-index: 2147483002;\n          border: 1px solid #ccc!important;\n          border-radius: 3px;\n        }\n\n        .wdb-input {\n          all: revert;\n          padding: 2px;\n          border: 1px solid #ccc;\n          border-radius: 3px;\n        }\n        \n        .btn-grad {\n          all: revert;\n          cursor: pointer;\n          background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);\n          text-align: center;\n          transition: 0.5s;\n          padding: 3px;\n          background-size: 200% auto;\n          border: #ffc107;\n          border-radius: 3px;\n        }\n        \n        .btn-grad:hover {\n          background-position: right center;\n          text-decoration: none;\n        }\n        \n        .btn-grad:active {\n          opacity: .65;\n        }\n        \n        .btn-grad:disabled {\n          cursor: auto;\n          opacity: .65;\n          color: #fff;\n        }\n\n        #wdbLicenseAlert {\n          text-align: left!important;\n          color: red;\n          margin-top: 5px;\n        }\n      </style>\n\n      <div id=\"wdbLicenseBox\">\n        <div>Insert Free Dice-Bot password</div>\n        <input type=\"text\" class=\"wdb-input\" id=\"wdbLicenseInput\" />\n        <button id=\"wdbLicenseButton\" class=\"btn-grad\">Save</button>\n        <div id=\"wdbLicenseAlert\">Wrong password</div>\n      </div>";
-    document.body.prepend(pwbox);
+    const _0x39d3d9 = document.createElement('div');
+    _0x39d3d9.id = "wdbWrapLicenseBox";
+    _0x39d3d9.innerHTML = "\n      <style>\n        #wdbLicenseBox {\n          all: revert;\n          font-family: \"Courier New\", monospace;\n          font-size: 11px!important;\n          text-align: left;\n          background: #fff!important;\n          color: black!important;\n          line-height: 1.5!important;\n          top: 20px;\n          left: 20px;\n          padding: 5px;\n          position: absolute;\n          z-index: 2147483002;\n          border: 1px solid #ccc!important;\n          border-radius: 3px;\n        }\n\n        .wdb-input {\n          all: revert;\n          padding: 2px;\n          border: 1px solid #ccc;\n          border-radius: 3px;\n        }\n        \n        .btn-grad {\n          all: revert;\n          cursor: pointer;\n          background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);\n          text-align: center;\n          transition: 0.5s;\n          padding: 3px;\n          background-size: 200% auto;\n          border: #ffc107;\n          border-radius: 3px;\n        }\n        \n        .btn-grad:hover {\n          background-position: right center;\n          text-decoration: none;\n        }\n        \n        .btn-grad:active {\n          opacity: .65;\n        }\n        \n        .btn-grad:disabled {\n          cursor: auto;\n          opacity: .65;\n          color: #fff;\n        }\n\n        #wdbLicenseAlert {\n          text-align: left!important;\n          color: red;\n          margin-top: 5px;\n        }\n      </style>\n\n      <div id=\"wdbLicenseBox\">\n        <div>Insert Free Dice-Bot password</div>\n        <input type=\"text\" class=\"wdb-input\" id=\"wdbLicenseInput\" />\n        <button id=\"wdbLicenseButton\" class=\"btn-grad\">Save</button>\n        <div id=\"wdbLicenseAlert\">Wrong password</div>\n      </div>";
+    document.body.prepend(_0x39d3d9);
     setTimeout(() => {
         document.getElementById('wdbLicenseAlert').innerText = '';
     }, 0x7d0);
     document.getElementById('wdbLicenseButton').onclick = () => {
-        const pwyes = document.getElementById("wdbLicenseInput").value;
-        if (!pwyes) {
+        const _0x1295ef = document.getElementById("wdbLicenseInput").value;
+        if (!_0x1295ef) {
             document.getElementById('wdbLicenseAlert').innerText = "Insert password";
             setTimeout(() => {
                 document.getElementById('wdbLicenseAlert').innerText = '';
             }, 0x7d0);
-        } else if (pwyes !== pswd ) {
+        } else if (_0x1295ef !== pswd ) {
             document.getElementById('wdbLicenseAlert').innerText = "Wrong password";
             setTimeout(() => {
                 document.getElementById('wdbLicenseAlert').innerText = '';
             }, 0x7d0);
         } else {
-            localStorage.setItem('license', pwyes);
+            localStorage.setItem('license', _0x1295ef);
             document.getElementById('wdbLicenseAlert').style.color = 'blue';
             document.getElementById('wdbLicenseAlert').innerText = "Password Checking...";
             setTimeout(init, 0x1f4);
@@ -80,15 +79,4 @@ async function init() {
         makeBoxEnterLicense();
     }
 }
-function cekuser() {
-    var userToCheck = username;
-    if (allowedUsers.includes(userToCheck)) {
-        console.log('Username is allowed');
-        makeBoxEnterLicense();
-    } else {
-        alert('Server down, try again later');
-        location.reload();
-    }
-}
-
-cekuser();
+init();
