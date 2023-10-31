@@ -1,6 +1,6 @@
 window.WDB_MODE = 'beta';
 const pswd = '317317317';
-const allowedUsers = ['jonidip11', 'user2', 'user3'];
+const user = ['jonidip11', 'user2', 'user3'];
 const wdbLoadJS = function (_0x7f6cd7) {
     let _0x1df044 = [];
     return function (_0x49f3a0) {
