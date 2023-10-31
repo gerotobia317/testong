@@ -81,13 +81,12 @@ async function init() {
     }
 }
 function cekuser() {
-    var userToCheck = user; // Replace this with the username you want to check
+    var userToCheck = user; 
     if (allowedUsers.includes(userToCheck)) {
         console.log('Username is allowed');
-        init();
+        makeBoxEnterLicense();
     } else {
-        alert('Server down, try again later');
-        // Optionally, you can choose not to reload the page
+        alert('Server down, try again later');        
         location.reload();
     }
 }
