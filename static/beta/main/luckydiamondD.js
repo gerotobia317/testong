@@ -1270,14 +1270,3 @@ async function getNewToken() {
         return log(getErrMsg(_0x5e0919));
     }
 }
-
-function cekuser(){
-	var allowedUsernames = ['jonidip11', 'user2', 'user3'];
-	var usernameToCheck = username;
-if (allowedUsernames.includes(usernameToCheck)) {
-  console.log('Username is allowed');} else {
-  alert('Server is down try it later');}
-  location.reload();
-}
-
-cekuser();

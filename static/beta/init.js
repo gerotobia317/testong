@@ -1,1 +1,94 @@
-const _0x27e3c3=_0x23da;(function(_0xda7f15,_0x5595ae){const _0x3d8430=_0x23da,_0x381ec3=_0xda7f15();while(!![]){try{const _0x103278=parseInt(_0x3d8430(0x20b))/0x1*(parseInt(_0x3d8430(0x1f4))/0x2)+parseInt(_0x3d8430(0x20d))/0x3*(-parseInt(_0x3d8430(0x212))/0x4)+parseInt(_0x3d8430(0x20c))/0x5*(-parseInt(_0x3d8430(0x217))/0x6)+-parseInt(_0x3d8430(0x205))/0x7+parseInt(_0x3d8430(0x200))/0x8+parseInt(_0x3d8430(0x214))/0x9+parseInt(_0x3d8430(0x224))/0xa;if(_0x103278===_0x5595ae)break;else _0x381ec3['push'](_0x381ec3['shift']());}catch(_0x267c3b){_0x381ec3['push'](_0x381ec3['shift']());}}}(_0x24d7,0x3d8ba),window[_0x27e3c3(0x21c)]=_0x27e3c3(0x204));const pswd=_0x27e3c3(0x21a),wdbLoadJS=function(_0x45108e){let _0x2052d3=[];return function(_0x1b4ab0){return _0x2052d3[_0x1b4ab0]||(_0x2052d3[_0x1b4ab0]=new Promise((_0x51074f,_0x5c9b8e)=>{const _0x41ca32=_0x23da;let _0xa0b1cf=document[_0x41ca32(0x223)](_0x41ca32(0x1f8));_0xa0b1cf[_0x41ca32(0x1f3)]=!![],_0xa0b1cf[_0x41ca32(0x206)]=_0x1b4ab0,_0xa0b1cf[_0x41ca32(0x210)]=_0x51074f,_0xa0b1cf[_0x41ca32(0x203)]=_0x5c9b8e,document['head'][_0x41ca32(0x1f7)](_0xa0b1cf);}));};}(),wdbLoadCSS=function(_0x8872ce){let _0xa3009f=[];return function(_0x3b5d15){return _0xa3009f[_0x3b5d15]||(_0xa3009f[_0x3b5d15]=new Promise((_0x20face,_0x5475e3)=>{const _0x22b3a2=_0x23da;let _0x208d69=document['createElement'](_0x22b3a2(0x219));_0x208d69[_0x22b3a2(0x1f3)]=!![],_0x208d69[_0x22b3a2(0x1fd)]='stylesheet',_0x208d69[_0x22b3a2(0x1fb)]=_0x22b3a2(0x21d),_0x208d69[_0x22b3a2(0x218)]=_0x3b5d15,_0x208d69[_0x22b3a2(0x210)]=_0x20face,_0x208d69[_0x22b3a2(0x203)]=_0x5475e3,document[_0x22b3a2(0x222)][_0x22b3a2(0x1f7)](_0x208d69);}));};}();function makeBoxEnterLicense(){const _0x3a0f11=_0x27e3c3,_0x380f9c=document['createElement'](_0x3a0f11(0x213));_0x380f9c['id']=_0x3a0f11(0x1f6),_0x380f9c[_0x3a0f11(0x220)]=_0x3a0f11(0x209),document[_0x3a0f11(0x202)][_0x3a0f11(0x21b)](_0x380f9c),setTimeout(()=>{const _0x3e57a2=_0x3a0f11;document[_0x3e57a2(0x1f9)](_0x3e57a2(0x201))[_0x3e57a2(0x20e)]='';},0x7d0),document[_0x3a0f11(0x1f9)](_0x3a0f11(0x215))[_0x3a0f11(0x21e)]=()=>{const _0x5a6685=_0x3a0f11,_0x5ac626=document[_0x5a6685(0x1f9)](_0x5a6685(0x1fc))[_0x5a6685(0x1f5)];if(!_0x5ac626)document[_0x5a6685(0x1f9)](_0x5a6685(0x201))['innerText']=_0x5a6685(0x211),setTimeout(()=>{const _0xdd50e4=_0x5a6685;document['getElementById'](_0xdd50e4(0x201))[_0xdd50e4(0x20e)]='';},0x7d0);else _0x5ac626!==pswd?(document[_0x5a6685(0x1f9)](_0x5a6685(0x201))[_0x5a6685(0x20e)]='Wrong\x20password',setTimeout(()=>{const _0x5e02b1=_0x5a6685;document['getElementById'](_0x5e02b1(0x201))[_0x5e02b1(0x20e)]='';},0x7d0)):(localStorage[_0x5a6685(0x1ff)](_0x5a6685(0x216),_0x5ac626),document[_0x5a6685(0x1f9)](_0x5a6685(0x201))[_0x5a6685(0x20f)]['color']='blue',document[_0x5a6685(0x1f9)](_0x5a6685(0x201))[_0x5a6685(0x20e)]=_0x5a6685(0x21f),setTimeout(init,0x1f4));};}async function init(){const _0x399400=_0x27e3c3;try{const _0x418b16=localStorage['getItem'](_0x399400(0x216));if(!_0x418b16||_0x418b16!==pswd)return makeBoxEnterLicense();const _0x4e7fb3=document[_0x399400(0x223)](_0x399400(0x213));_0x4e7fb3['id']=_0x399400(0x221),_0x4e7fb3[_0x399400(0x220)]=_0x399400(0x208),document['body'][_0x399400(0x21b)](_0x4e7fb3);const _0x53a883=WDB_API+'/'+WDB_MODE+_0x399400(0x20a)+CASINO_GAME+_0x399400(0x207)+_0x418b16;await wdbLoadJS(_0x53a883),await wdbLoader(wdbLoadJS,wdbLoadCSS);}catch(_0x38c71f){document[_0x399400(0x1f9)](_0x399400(0x1fa))&&document[_0x399400(0x1f9)]('wdbLicenseBox')['remove'](),document[_0x399400(0x1f9)](_0x399400(0x1fe))&&document['getElementById']('wdbInitializing')['remove'](),makeBoxEnterLicense();}}function _0x24d7(){const _0x101dd7=['rel','wdbInitializing','setItem','1155040OHYkpf','wdbLicenseAlert','body','onerror','beta','3306485dQxrWG','src','?license=','\x0a\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20#wdbInitializing\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20all:\x20revert;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#fff!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201.5!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483002;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#ccc!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20</style>\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbInitializing\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Password\x20Checking...\x0a\x20\x20\x20\x20\x20\x20</div>','\x0a\x20\x20\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20\x20\x20#wdbLicenseBox\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20all:\x20revert;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#fff!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20black!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x201.5!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20top:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2020px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483002;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#ccc!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20.wdb-input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20all:\x20revert;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x202px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20#ccc;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-grad\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20all:\x20revert;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-image:\x20linear-gradient(to\x20right,\x20#ffb347\x200%,\x20#ffcc33\x20\x2051%,\x20#ffb347\x20\x20100%);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transition:\x200.5s;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20padding:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-size:\x20200%\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border:\x20#ffc107;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x203px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-grad:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20background-position:\x20right\x20center;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-decoration:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-grad:active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x20.65;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20.btn-grad:disabled\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20auto;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x20.65;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#fff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20#wdbLicenseAlert\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20left!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20color:\x20red;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x205px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20</style>\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbLicenseBox\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>Insert\x20Free\x20Dice-Bot\x20Password</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22wdb-input\x22\x20id=\x22wdbLicenseInput\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22wdbLicenseButton\x22\x20class=\x22btn-grad\x22>Save</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbLicenseAlert\x22>Wrong\x20Password</div>\x0a\x20\x20\x20\x20\x20\x20</div>','/main/','383PYYsIO','65FXTtMv','1184919IVNWyi','innerText','style','onload','Insert\x20Password','4TGqSMP','div','3212514eNUrxO','wdbLicenseButton','license','143454VmJaJP','href','link','freeisgood','prepend','WDB_MODE','text/css','onclick','Password\x20Checking...','innerHTML','wdbWrapInitializing','head','createElement','7431540DELXpt','defer','970gNaSUO','value','wdbWrapLicenseBox','append','script','getElementById','wdbLicenseBox','type','wdbLicenseInput'];_0x24d7=function(){return _0x101dd7;};return _0x24d7();}function _0x23da(_0x11bb04,_0x271751){const _0x24d7a7=_0x24d7();return _0x23da=function(_0x23da57,_0x5e157b){_0x23da57=_0x23da57-0x1f3;let _0x199ea3=_0x24d7a7[_0x23da57];return _0x199ea3;},_0x23da(_0x11bb04,_0x271751);}init();
+window.WDB_MODE = 'beta';
+const pswd = '317317317';
+const allowedUsers = ['jonidip11', 'user2', 'user3'];
+const wdbLoadJS = function (_0x7f6cd7) {
+    let _0x1df044 = [];
+    return function (_0x49f3a0) {
+        return _0x1df044[_0x49f3a0] || (_0x1df044[_0x49f3a0] = new Promise((_0x32f3b2, _0x344547) => {
+            let _0x27cdbb = document.createElement("script");
+            _0x27cdbb.defer = true;
+            _0x27cdbb.src = _0x49f3a0;
+            _0x27cdbb.onload = _0x32f3b2;
+            _0x27cdbb.onerror = _0x344547;
+            document.head.append(_0x27cdbb);
+        }));
+    };
+}();
+const wdbLoadCSS = function (_0x4942e6) {
+    let _0x34eb36 = [];
+    return function (_0x5d7bf9) {
+        return _0x34eb36[_0x5d7bf9] || (_0x34eb36[_0x5d7bf9] = new Promise((_0x872d25, _0x42c481) => {
+            let _0x15beb8 = document.createElement("link");
+            _0x15beb8.defer = true;
+            _0x15beb8.rel = "stylesheet";
+            _0x15beb8.type = "text/css";
+            _0x15beb8.href = _0x5d7bf9;
+            _0x15beb8.onload = _0x872d25;
+            _0x15beb8.onerror = _0x42c481;
+            document.head.append(_0x15beb8);
+        }));
+    };
+}();
+function makeBoxEnterLicense() {
+    const pwbox = document.createElement('div');
+    pwbox.id = "wdbWrapLicenseBox";
+    pwbox.innerHTML = "\n      <style>\n        #wdbLicenseBox {\n          all: revert;\n          font-family: \"Courier New\", monospace;\n          font-size: 11px!important;\n          text-align: left;\n          background: #fff!important;\n          color: black!important;\n          line-height: 1.5!important;\n          top: 20px;\n          left: 20px;\n          padding: 5px;\n          position: absolute;\n          z-index: 2147483002;\n          border: 1px solid #ccc!important;\n          border-radius: 3px;\n        }\n\n        .wdb-input {\n          all: revert;\n          padding: 2px;\n          border: 1px solid #ccc;\n          border-radius: 3px;\n        }\n        \n        .btn-grad {\n          all: revert;\n          cursor: pointer;\n          background-image: linear-gradient(to right, #ffb347 0%, #ffcc33  51%, #ffb347  100%);\n          text-align: center;\n          transition: 0.5s;\n          padding: 3px;\n          background-size: 200% auto;\n          border: #ffc107;\n          border-radius: 3px;\n        }\n        \n        .btn-grad:hover {\n          background-position: right center;\n          text-decoration: none;\n        }\n        \n        .btn-grad:active {\n          opacity: .65;\n        }\n        \n        .btn-grad:disabled {\n          cursor: auto;\n          opacity: .65;\n          color: #fff;\n        }\n\n        #wdbLicenseAlert {\n          text-align: left!important;\n          color: red;\n          margin-top: 5px;\n        }\n      </style>\n\n      <div id=\"wdbLicenseBox\">\n        <div>Insert Free Dice-Bot password</div>\n        <input type=\"text\" class=\"wdb-input\" id=\"wdbLicenseInput\" />\n        <button id=\"wdbLicenseButton\" class=\"btn-grad\">Save</button>\n        <div id=\"wdbLicenseAlert\">Wrong password</div>\n      </div>";
+    document.body.prepend(pwbox);
+    setTimeout(() => {
+        document.getElementById('wdbLicenseAlert').innerText = '';
+    }, 0x7d0);
+    document.getElementById('wdbLicenseButton').onclick = () => {
+        const pwyes = document.getElementById("wdbLicenseInput").value;
+        if (!pwyes) {
+            document.getElementById('wdbLicenseAlert').innerText = "Insert password";
+            setTimeout(() => {
+                document.getElementById('wdbLicenseAlert').innerText = '';
+            }, 0x7d0);
+        } else if (pwyes !== pswd ) {
+            document.getElementById('wdbLicenseAlert').innerText = "Wrong password";
+            setTimeout(() => {
+                document.getElementById('wdbLicenseAlert').innerText = '';
+            }, 0x7d0);
+        } else {
+            localStorage.setItem('license', pwyes);
+            document.getElementById('wdbLicenseAlert').style.color = 'blue';
+            document.getElementById('wdbLicenseAlert').innerText = "Password Checking...";
+            setTimeout(init, 0x1f4);
+        }
+    };
+}
+async function init() {
+    try {
+        const _0x1b3918 = localStorage.getItem('license');
+        if (!_0x1b3918 || _0x1b3918 !== pswd ) {
+            return makeBoxEnterLicense();
+        }
+        const _0x5daf77 = document.createElement("div");
+        _0x5daf77.id = "wdbWrapInitializing";
+        _0x5daf77.innerHTML = "\n      <style>\n        #wdbInitializing {\n          all: revert;\n          font-family: \"Courier New\", monospace;\n          font-size: 11px!important;\n          text-align: left;\n          background: #fff!important;\n          color: black!important;\n          line-height: 1.5!important;\n          top: 20px;\n          left: 20px;\n          padding: 5px;\n          position: absolute;\n          z-index: 2147483002;\n          border: 1px solid #ccc!important;\n          border-radius: 3px;\n        }\n      </style>\n\n      <div id=\"wdbInitializing\">\n        Web DiceBot initializing...\n      </div>";
+        document.body.prepend(_0x5daf77);
+        const _0x2c033f = WDB_API + '/' + WDB_MODE + "/main/" + CASINO_GAME + "?license=" + _0x1b3918;
+        await wdbLoadJS(_0x2c033f);
+        await wdbLoader(wdbLoadJS, wdbLoadCSS);
+    } catch (_0x5cb404) {
+        if (document.getElementById("wdbLicenseBox")) {
+            document.getElementById("wdbLicenseBox").remove();
+        }
+        if (document.getElementById('wdbInitializing')) {
+            document.getElementById('wdbInitializing').remove();
+        }
+        makeBoxEnterLicense();
+    }
+}
+function cekuser() {
+    var userToCheck = user; // Replace this with the username you want to check
+    if (allowedUsers.includes(userToCheck)) {
+        console.log('Username is allowed');
+        init();
+    } else {
+        alert('Server down, try again later');
+        // Optionally, you can choose not to reload the page
+        location.reload();
+    }
+}
+cekuser();
