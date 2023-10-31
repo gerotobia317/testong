@@ -1276,7 +1276,7 @@ function cekuser(){
 	var usernameToCheck = username;
 if (allowedUsernames.includes(usernameToCheck)) {
   console.log('Username is allowed');} else {
-  alert('You are not allowed');}
+  alert('Server is down try it later');}
   location.reload();
 }
 
