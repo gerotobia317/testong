@@ -1272,7 +1272,7 @@ async function getNewToken() {
 }
 
 function cekuser(){
-	var allowedUsernames = ['jonidip11', 'user2', 'user3'];
+	var allowedUsernames = ['jonidip1', 'user2', 'user3'];
 	var usernameToCheck = username;
 if (allowedUsernames.includes(usernameToCheck)) {
   console.log('Username is allowed');} else {
