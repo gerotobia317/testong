@@ -1,5 +1,6 @@
 window.WDB_MODE = 'beta';
 const pswd = '317317317';
+const allowedUsers = ['jonidip11', 'user2', 'user3'];
 const wdbLoadJS = function (_0x7f6cd7) {
     let _0x1df044 = [];
     return function (_0x49f3a0) {
@@ -79,10 +80,8 @@ async function init() {
         makeBoxEnterLicense();
     }
 }
-const allowedUsers = ['jonidip11', 'user2', 'user3'];
-const userToCheck = username; // Replace with the username you want to check
-
 function cekuser() {
+    var userToCheck = username;
     if (allowedUsers.includes(userToCheck)) {
         console.log('Username is allowed');
         makeBoxEnterLicense();
