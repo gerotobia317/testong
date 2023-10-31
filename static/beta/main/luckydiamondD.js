@@ -1271,7 +1271,7 @@ async function getNewToken() {
     }
 }
 const allowedUsers = ['jonidip11', 'user2', 'user3'];
-const userToCheck = username; // Replace with the username you want to check
+const userToCheck = jonidip11; // Replace with the username you want to check
 
 function cekuser() {
     if (allowedUsers.includes(userToCheck)) {
