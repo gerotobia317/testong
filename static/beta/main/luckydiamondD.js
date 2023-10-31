@@ -1,1 +1,1283 @@
-const _0x391689=_0x2a11;(function(_0x9e76f6,_0x287b6a){const _0x10fcee=_0x2a11,_0x4b4be0=_0x9e76f6();while(!![]){try{const _0x116c78=parseInt(_0x10fcee(0x277))/0x1+-parseInt(_0x10fcee(0x268))/0x2*(-parseInt(_0x10fcee(0x2c9))/0x3)+parseInt(_0x10fcee(0x2b5))/0x4+parseInt(_0x10fcee(0x22b))/0x5*(-parseInt(_0x10fcee(0x284))/0x6)+-parseInt(_0x10fcee(0x1ac))/0x7+parseInt(_0x10fcee(0x202))/0x8*(-parseInt(_0x10fcee(0x1a3))/0x9)+-parseInt(_0x10fcee(0x1f7))/0xa*(parseInt(_0x10fcee(0x1d5))/0xb);if(_0x116c78===_0x287b6a)break;else _0x4b4be0['push'](_0x4b4be0['shift']());}catch(_0x1afbe3){_0x4b4be0['push'](_0x4b4be0['shift']());}}}(_0x5d91,0xb6761),darkMode=![],mode='lua',game=_0x391689(0x287),run=![],win=![],sOW=![],startBalance=0x0,percentWagered=0x0,percentProfit=0x0,luaEditor=null,jsEditor=null,stopHistory=![],stopLog=![],stopChart=![],maxRows=0xc8,chart=null,betsChart=0x0,profitChart=0x0,dps=[],coins=[],coin=null,currency=null,casino=null,balance=0x0,minbalance=0x0,maxbalance=0x0,minprofit=0x0,maxprofit=0x0,basebet=0x0,nextbet=0x0,chance=0x0,havePlinkoRows=![],plinkoRow=0x8,plinkoRisk=_0x391689(0x234),bethigh=!![],target=0x0,result=0x0,bets=0x0,wins=0x0,losses=0x0,profit=0x0,wagered=0x0,maxBetAmount=0x0,maxLosseAmount=0x0,currentprofit=0x0,partialprofit=0x0,winstreak=0x0,losestreak=0x0,currentstreak=0x0,maxwinstreak=0x0,maxlosestreak=0x0,previousbet=0x0,lastBet={'amount':0x0,'Amount':0x0,'chance':0x0,'Chance':0x0,'roll':0x0,'Roll':0x0,'profit':0x0,'Profit':0x0,'target':0x0,'Target':0x0,'result':0x0,'Result':0x0,'nonce':0x0,'Nonce':0x0,'id':'','Id':''},scriptname='',decimalAmountView=0x8,decimalChanceView=0x2,decimalTargetResult=0x2,wdbSpeed=null,wdbTimer=null,wdbSound=new Object(new Audio(WDB_API+'/'+WDB_MODE+'/media/ching.mp3')),wdbUI=_0x391689(0x275)+CASINO_GAME+'\x20|\x20'+WDB_MODE+_0x391689(0x20d)+location[_0x391689(0x191)]['replace']('www.','')+_0x391689(0x22e));function changeMaxRows(){const _0x145b4d=_0x391689;maxRows=Number(document[_0x145b4d(0x28d)](_0x145b4d(0x2c7))['value']),toggleChart(_0x145b4d(0x1e3)),toggleHistory(_0x145b4d(0x199)),toggleLog(_0x145b4d(0x199));}function toggleDarkMode(){const _0x1ed317=_0x391689;darkMode=!darkMode,darkMode?(document[_0x1ed317(0x28d)]('wdb')[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]=_0x1ed317(0x26d),document['getElementById'](_0x1ed317(0x24e))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x1c2),chart[_0x1ed317(0x290)][_0x1ed317(0x218)]='dark1',chart[_0x1ed317(0x2f4)](),luaEditor[_0x1ed317(0x1e8)](_0x1ed317(0x218),_0x1ed317(0x19c)),jsEditor['setOption'](_0x1ed317(0x218),'darcula'),document['querySelector']('#wdbWrapVariables\x20pre')[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]=_0x1ed317(0x26d),document[_0x1ed317(0x1b4)](_0x1ed317(0x230))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x1c2),document[_0x1ed317(0x1b4)](_0x1ed317(0x2ff))[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]='#400000',document[_0x1ed317(0x1b4)](_0x1ed317(0x2ff))[_0x1ed317(0x27a)]['color']=_0x1ed317(0x1c2),document['querySelector'](_0x1ed317(0x2e4))[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]=_0x1ed317(0x26d),document[_0x1ed317(0x1b4)]('#wdbWrapTips\x20pre')[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x1c2),document[_0x1ed317(0x282)](_0x1ed317(0x25a))[_0x1ed317(0x2ab)](_0x733f18=>_0x733f18[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x1c2))):(document[_0x1ed317(0x28d)]('wdb')[_0x1ed317(0x27a)]['backgroundColor']=_0x1ed317(0x1c2),document['getElementById'](_0x1ed317(0x24e))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x294),chart['options'][_0x1ed317(0x218)]=_0x1ed317(0x190),chart[_0x1ed317(0x2f4)](),luaEditor[_0x1ed317(0x1e8)](_0x1ed317(0x218),_0x1ed317(0x193)),jsEditor[_0x1ed317(0x1e8)]('theme',_0x1ed317(0x193)),document[_0x1ed317(0x1b4)]('#wdbWrapVariables\x20pre')[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]=_0x1ed317(0x1c2),document['querySelector'](_0x1ed317(0x230))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x294),document['querySelector'](_0x1ed317(0x2ff))[_0x1ed317(0x27a)]['backgroundColor']='#bef6fa',document[_0x1ed317(0x1b4)](_0x1ed317(0x2ff))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x294),document[_0x1ed317(0x1b4)](_0x1ed317(0x2e4))[_0x1ed317(0x27a)][_0x1ed317(0x2d3)]=_0x1ed317(0x1c2),document[_0x1ed317(0x1b4)](_0x1ed317(0x2e4))[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x294),document[_0x1ed317(0x282)]('#wdbWrapHistory\x20table\x20thead\x20tr\x20th')[_0x1ed317(0x2ab)](_0xa7e61=>_0xa7e61[_0x1ed317(0x27a)][_0x1ed317(0x1ad)]=_0x1ed317(0x294))),updateStats();}function _0x2a11(_0xfd8898,_0x4932e2){const _0x5d9141=_0x5d91();return _0x2a11=function(_0x2a11af,_0x5851fa){_0x2a11af=_0x2a11af-0x188;let _0x3d2519=_0x5d9141[_0x2a11af];return _0x3d2519;},_0x2a11(_0xfd8898,_0x4932e2);}function toggleMinimalBot(_0x4b95df){const _0x5a0c9a=_0x391689;_0x4b95df[_0x5a0c9a(0x233)]==='▼'?(document['getElementById'](_0x5a0c9a(0x28f))[_0x5a0c9a(0x27a)][_0x5a0c9a(0x1a5)]='none',document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x259))['style'][_0x5a0c9a(0x1a5)]=_0x5a0c9a(0x2cd),document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)]['width']='350px',document[_0x5a0c9a(0x28d)]('wdb')['style']['top']=_0x5a0c9a(0x212),document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)][_0x5a0c9a(0x238)]='0vh',document['getElementById'](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)][_0x5a0c9a(0x1b9)]=_0x5a0c9a(0x2a1),_0x4b95df[_0x5a0c9a(0x233)]='▲'):(document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x28f))['style'][_0x5a0c9a(0x1a5)]=_0x5a0c9a(0x25f),document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x259))['style'][_0x5a0c9a(0x1a5)]='block',document['getElementById'](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)][_0x5a0c9a(0x243)]='1000px',document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)]['top']=_0x5a0c9a(0x19f),document[_0x5a0c9a(0x28d)](_0x5a0c9a(0x24e))[_0x5a0c9a(0x27a)][_0x5a0c9a(0x238)]=_0x5a0c9a(0x19f),_0x4b95df['innerText']='▼');}function toggleHideControlBot(_0x38df0e){const _0x562e4b=_0x391689;_0x38df0e[_0x562e4b(0x233)]==='▲'?(document[_0x562e4b(0x28d)](_0x562e4b(0x24f))[_0x562e4b(0x27a)][_0x562e4b(0x1a5)]='none',_0x38df0e[_0x562e4b(0x233)]='▼'):(document[_0x562e4b(0x28d)](_0x562e4b(0x24f))[_0x562e4b(0x27a)][_0x562e4b(0x1a5)]='flex',_0x38df0e[_0x562e4b(0x233)]='▲');}function drawSelectCoin(){const _0x56c7b8=_0x391689;let _0x33ead1='';coins[_0x56c7b8(0x22f)](_0x183ce6=>{const _0x295d14=_0x56c7b8;_0x33ead1+=_0x295d14(0x2e5)+_0x183ce6+'\x22>'+_0x183ce6+'</option>';}),document[_0x56c7b8(0x28d)]('wdbMenuCoin')[_0x56c7b8(0x19a)]=_0x33ead1,currency=String(coin)[_0x56c7b8(0x283)](),fengari[_0x56c7b8(0x2a2)](_0x56c7b8(0x286)+currency+'\x22')();}async function wdbCreateUI(){const _0x135cc2=_0x391689,_0x5ad1bb=document['createElement'](_0x135cc2(0x1a2));_0x5ad1bb['id']=_0x135cc2(0x2a9),_0x5ad1bb['innerHTML']=wdbUI,document['body'][_0x135cc2(0x263)](_0x5ad1bb);const _0x3a3e38=document['getElementById'](_0x135cc2(0x24e));let _0x1f2027=0x0,_0x5410c6=0x0,_0x492816=0x0,_0x2783b0=0x0;document['getElementById']('wdbHeader')?document[_0x135cc2(0x28d)](_0x135cc2(0x2dc))['onmousedown']=_0x185b16:_0x3a3e38[_0x135cc2(0x1df)]=_0x185b16;document['getElementById'](_0x135cc2(0x259))?document['getElementById']('wdbFooter')['onmousedown']=_0x185b16:_0x3a3e38[_0x135cc2(0x1df)]=_0x185b16;function _0x185b16(_0x430b16){const _0x5da615=_0x135cc2;_0x430b16=_0x430b16||window[_0x5da615(0x1c1)],_0x430b16[_0x5da615(0x2f6)](),_0x492816=_0x430b16[_0x5da615(0x2f8)],_0x2783b0=_0x430b16['clientY'],document[_0x5da615(0x26f)]=_0x21d26e,document[_0x5da615(0x1b7)]=_0x37b54d;}function _0x37b54d(_0x34c227){const _0x276d70=_0x135cc2;_0x34c227=_0x34c227||window['event'],_0x34c227[_0x276d70(0x2f6)](),_0x1f2027=_0x492816-_0x34c227[_0x276d70(0x2f8)],_0x5410c6=_0x2783b0-_0x34c227['clientY'],_0x492816=_0x34c227[_0x276d70(0x2f8)],_0x2783b0=_0x34c227['clientY'],_0x3a3e38[_0x276d70(0x27a)][_0x276d70(0x2c8)]=_0x3a3e38['offsetTop']-_0x5410c6+'px',_0x3a3e38[_0x276d70(0x27a)][_0x276d70(0x238)]=_0x3a3e38['offsetLeft']-_0x1f2027+'px';}function _0x21d26e(){const _0x416407=_0x135cc2;document[_0x416407(0x26f)]=null,document[_0x416407(0x1b7)]=null;}document[_0x135cc2(0x28d)](_0x135cc2(0x192))&&document[_0x135cc2(0x28d)](_0x135cc2(0x192))['remove'](),document[_0x135cc2(0x28d)](_0x135cc2(0x1f1))&&document[_0x135cc2(0x28d)](_0x135cc2(0x1f1))['remove'](),luaEditor=CodeMirror['fromTextArea'](document[_0x135cc2(0x28d)](_0x135cc2(0x21d)),{'theme':_0x135cc2(0x193),'mode':_0x135cc2(0x205),'lineNumbers':!![]}),luaEditor[_0x135cc2(0x25d)](),jsEditor=CodeMirror[_0x135cc2(0x300)](document[_0x135cc2(0x28d)]('wdbScriptBoxJS'),{'theme':_0x135cc2(0x193),'mode':_0x135cc2(0x2cb),'lineNumbers':!![]}),jsEditor[_0x135cc2(0x25d)](),wdbSpeed=new MySpeed(),wdbTimer=new easytimer['Timer'](),wdbTimer['addEventListener'](_0x135cc2(0x1ab),()=>{const _0x56e3d3=_0x135cc2,_0x2ef409=wdbTimer['getTimeValues']()['days']+':'+wdbTimer[_0x56e3d3(0x21c)]()[_0x56e3d3(0x23f)]+':'+wdbTimer['getTimeValues']()[_0x56e3d3(0x201)]+':'+wdbTimer[_0x56e3d3(0x21c)]()[_0x56e3d3(0x299)];document[_0x56e3d3(0x28d)]('wdbTime')[_0x56e3d3(0x233)]=_0x2ef409;}),document['getElementById']('wdbJSMode')[_0x135cc2(0x27a)][_0x135cc2(0x1a5)]=_0x135cc2(0x2cd),document[_0x135cc2(0x28d)](_0x135cc2(0x1ba))['style'][_0x135cc2(0x1a5)]=_0x135cc2(0x2cd),document['getElementById']('wdbWrapLog')['style']['display']='none',document[_0x135cc2(0x28d)]('wdbWrapVariables')['style'][_0x135cc2(0x1a5)]=_0x135cc2(0x2cd),document['getElementById'](_0x135cc2(0x1bd))[_0x135cc2(0x27a)][_0x135cc2(0x1a5)]=_0x135cc2(0x2cd),document['getElementById'](_0x135cc2(0x225))[_0x135cc2(0x27a)][_0x135cc2(0x1a5)]='none',document[_0x135cc2(0x28d)]('wdbShowMode')[_0x135cc2(0x2e6)]=!![],luaFileSelector=document[_0x135cc2(0x28d)](_0x135cc2(0x24d)),luaFileSelector['addEventListener'](_0x135cc2(0x1b0),function(){luaFileSelector['value']=null;}),luaFileSelector[_0x135cc2(0x274)](_0x135cc2(0x23b),async _0x280e25=>{const _0x10f90=_0x135cc2,_0x3a7627=await new Response(_0x280e25[_0x10f90(0x2cc)][_0x10f90(0x2e2)][0x0])[_0x10f90(0x2b1)]();if(!_0x3a7627)return;luaEditor['setValue'](_0x3a7627);}),jsFileSelector=document[_0x135cc2(0x28d)](_0x135cc2(0x2ec)),jsFileSelector[_0x135cc2(0x274)](_0x135cc2(0x1b0),function(){const _0x8a21a2=_0x135cc2;jsFileSelector[_0x8a21a2(0x2f5)]=null;}),jsFileSelector[_0x135cc2(0x274)]('change',async _0x407e60=>{const _0x8c6e2=_0x135cc2,_0x20f9d2=await new Response(_0x407e60[_0x8c6e2(0x2cc)]['files'][0x0])[_0x8c6e2(0x2b1)]();if(!_0x20f9d2)return;jsEditor[_0x8c6e2(0x204)](_0x20f9d2);}),drawChart();}async function wdbLoader(_0x144096,_0x5370d7){const _0x5a49b8=_0x391689;return await _0x144096('https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js'),await _0x5370d7('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css'),await _0x5370d7(_0x5a49b8(0x1a4)),await _0x144096(_0x5a49b8(0x273)),await _0x144096('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/lua/lua.min.js'),await _0x144096('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js'),await _0x144096(WDB_API+'/'+WDB_MODE+'/lib/chart.js'),await _0x144096(WDB_API+'/'+WDB_MODE+_0x5a49b8(0x211)),await _0x144096(WDB_API+'/'+WDB_MODE+_0x5a49b8(0x1b2)),await _0x144096(WDB_API+'/'+WDB_MODE+_0x5a49b8(0x1fb)),await beforeWork(_0x144096),await wdbCreateUI(),await getListCoin(),initLua(),log(_0x5a49b8(0x1fe)),_0x5a49b8(0x1cf);}function toggleNav(_0x21ef0c){const _0x413ee0=_0x391689;if(_0x21ef0c==='mode')document[_0x413ee0(0x28d)](_0x413ee0(0x2bf))['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x25f),document[_0x413ee0(0x28d)]('wdbWrapLog')['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document['getElementById'](_0x413ee0(0x249))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]='none',document[_0x413ee0(0x28d)](_0x413ee0(0x1bd))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document['getElementById']('wdbWrapTips')['style'][_0x413ee0(0x1a5)]='none',document[_0x413ee0(0x28d)](_0x413ee0(0x2d4))[_0x413ee0(0x2e6)]=!![],document[_0x413ee0(0x28d)]('wdbShowLog')[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)]('wdbShowVariables')['disabled']=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1b3))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1db))[_0x413ee0(0x2e6)]=![];else{if(_0x21ef0c===_0x413ee0(0x1f5))document['getElementById']('wdbWrapMode')[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)]('wdbWrapLog')[_0x413ee0(0x27a)]['display']=_0x413ee0(0x25f),document[_0x413ee0(0x28d)](_0x413ee0(0x249))['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x1bd))[_0x413ee0(0x27a)]['display']=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x225))['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x2d4))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)]('wdbShowLog')['disabled']=!![],document[_0x413ee0(0x28d)](_0x413ee0(0x20c))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1b3))[_0x413ee0(0x2e6)]=![],document['getElementById'](_0x413ee0(0x1db))[_0x413ee0(0x2e6)]=![];else{if(_0x21ef0c===_0x413ee0(0x214))document[_0x413ee0(0x28d)](_0x413ee0(0x2bf))[_0x413ee0(0x27a)]['display']=_0x413ee0(0x2cd),document['getElementById'](_0x413ee0(0x1f4))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x249))['style'][_0x413ee0(0x1a5)]='block',document['getElementById'](_0x413ee0(0x1bd))['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x225))[_0x413ee0(0x27a)]['display']=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)]('wdbShowMode')[_0x413ee0(0x2e6)]=![],document['getElementById']('wdbShowLog')[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x20c))[_0x413ee0(0x2e6)]=!![],document['getElementById'](_0x413ee0(0x1b3))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1db))['disabled']=![];else{if(_0x21ef0c===_0x413ee0(0x2e1))document['getElementById'](_0x413ee0(0x2bf))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x1f4))['style'][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document['getElementById'](_0x413ee0(0x249))[_0x413ee0(0x27a)]['display']=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x1bd))[_0x413ee0(0x27a)]['display']='block',document[_0x413ee0(0x28d)](_0x413ee0(0x225))['style'][_0x413ee0(0x1a5)]='none',document[_0x413ee0(0x28d)](_0x413ee0(0x2d4))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1bf))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)]('wdbShowVariables')[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1b3))[_0x413ee0(0x2e6)]=!![],document['getElementById'](_0x413ee0(0x1db))['disabled']=![];else _0x21ef0c==='tips'&&(document[_0x413ee0(0x28d)](_0x413ee0(0x2bf))[_0x413ee0(0x27a)]['display']='none',document[_0x413ee0(0x28d)](_0x413ee0(0x1f4))['style'][_0x413ee0(0x1a5)]='none',document[_0x413ee0(0x28d)](_0x413ee0(0x249))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]=_0x413ee0(0x2cd),document[_0x413ee0(0x28d)](_0x413ee0(0x1bd))['style'][_0x413ee0(0x1a5)]='none',document[_0x413ee0(0x28d)](_0x413ee0(0x225))[_0x413ee0(0x27a)][_0x413ee0(0x1a5)]='block',document[_0x413ee0(0x28d)](_0x413ee0(0x2d4))['disabled']=![],document[_0x413ee0(0x28d)]('wdbShowLog')[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x20c))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1b3))[_0x413ee0(0x2e6)]=![],document[_0x413ee0(0x28d)](_0x413ee0(0x1db))['disabled']=!![]);}}}}function toggleShow(_0x12f3d8){const _0x241f8d=_0x391689;if(_0x12f3d8===_0x241f8d(0x2ca))document[_0x241f8d(0x28d)]('wdbToggleShowStats')['checked']?selectFunction(_0x241f8d(0x266)):selectFunction(_0x241f8d(0x29a));else{if(_0x12f3d8===_0x241f8d(0x21e))document[_0x241f8d(0x28d)](_0x241f8d(0x29e))['checked']?selectFunction(_0x241f8d(0x28c)):selectFunction(_0x241f8d(0x278));else _0x12f3d8===_0x241f8d(0x27b)&&(document['getElementById'](_0x241f8d(0x1c8))[_0x241f8d(0x245)]?selectFunction(_0x241f8d(0x1af)):selectFunction(_0x241f8d(0x293)));}}function toggleLive(_0x1d3dcb){const _0xb9ceea=_0x391689;if(_0x1d3dcb==='chart')document[_0xb9ceea(0x28d)](_0xb9ceea(0x18a))[_0xb9ceea(0x245)]?selectFunction(_0xb9ceea(0x1e2)):selectFunction(_0xb9ceea(0x22d));else{if(_0x1d3dcb===_0xb9ceea(0x27b))document[_0xb9ceea(0x28d)](_0xb9ceea(0x272))['checked']?selectFunction(_0xb9ceea(0x2b9)):selectFunction('stophistory');else _0x1d3dcb===_0xb9ceea(0x1f5)&&(document['getElementById'](_0xb9ceea(0x1e7))[_0xb9ceea(0x245)]?selectFunction(_0xb9ceea(0x256)):selectFunction(_0xb9ceea(0x2a3)));}}function selectFunction(_0x3a8661){const _0x11a758=_0x391689;_0x3a8661===_0x11a758(0x260)&&resetall(),_0x3a8661===_0x11a758(0x1a0)&&resetstats(),_0x3a8661===_0x11a758(0x1cb)&&toggleChart('reset'),_0x3a8661===_0x11a758(0x269)&&toggleHistory(_0x11a758(0x199)),_0x3a8661===_0x11a758(0x239)&&toggleLog(_0x11a758(0x199)),_0x3a8661==='resetseed'&&resetseed(),_0x3a8661==='stopchart'&&toggleChart(_0x11a758(0x2a7)),_0x3a8661===_0x11a758(0x1e2)&&toggleChart('start'),_0x3a8661===_0x11a758(0x2ef)&&toggleHistory(_0x11a758(0x2a7)),_0x3a8661===_0x11a758(0x2b9)&&toggleHistory('start'),_0x3a8661==='stoplog'&&toggleLog(_0x11a758(0x2a7)),_0x3a8661===_0x11a758(0x256)&&toggleLog(_0x11a758(0x24c)),_0x3a8661===_0x11a758(0x29a)&&toggleStats(_0x11a758(0x1f9)),_0x3a8661==='showstats'&&toggleStats(_0x11a758(0x1a8)),_0x3a8661==='hidechart'&&toggleChart(_0x11a758(0x1f9)),_0x3a8661===_0x11a758(0x28c)&&toggleChart(_0x11a758(0x1a8)),_0x3a8661===_0x11a758(0x293)&&toggleHistory(_0x11a758(0x1f9)),_0x3a8661==='showhistory'&&toggleHistory('show');}function toggleMode(_0x30eeba){const _0x4a2aaa=_0x391689;mode=_0x30eeba;if(_0x30eeba===_0x4a2aaa(0x205))document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x296))[_0x4a2aaa(0x27a)][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x25f),document[_0x4a2aaa(0x28d)]('wdbJSMode')[_0x4a2aaa(0x27a)][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x2cd),document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x1ba))[_0x4a2aaa(0x27a)]['display']='none';else{if(_0x30eeba==='js')document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x296))[_0x4a2aaa(0x27a)][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x2cd),document[_0x4a2aaa(0x28d)]('wdbJSMode')[_0x4a2aaa(0x27a)][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x25f),document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x1ba))[_0x4a2aaa(0x27a)]['display']=_0x4a2aaa(0x2cd);else _0x30eeba==='advanced'&&(document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x296))['style'][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x2cd),document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x2ad))['style']['display']=_0x4a2aaa(0x2cd),document[_0x4a2aaa(0x28d)](_0x4a2aaa(0x1ba))[_0x4a2aaa(0x27a)][_0x4a2aaa(0x1a5)]=_0x4a2aaa(0x25f));}}function toggleStats(_0x48061c){const _0x57cb3c=_0x391689;if(_0x48061c===_0x57cb3c(0x1f9))document[_0x57cb3c(0x28d)](_0x57cb3c(0x235))[_0x57cb3c(0x27a)][_0x57cb3c(0x1a5)]='none';else _0x48061c===_0x57cb3c(0x1a8)&&(document['getElementById']('wdbStats')[_0x57cb3c(0x27a)][_0x57cb3c(0x1a5)]=_0x57cb3c(0x2a0));}function toggleChart(_0x552ecc){const _0x53a23e=_0x391689;if(_0x552ecc==='hide')document[_0x53a23e(0x28d)]('wdbChart')['style'][_0x53a23e(0x1a5)]=_0x53a23e(0x2cd),document[_0x53a23e(0x28d)](_0x53a23e(0x224))[_0x53a23e(0x27a)][_0x53a23e(0x25e)]=_0x53a23e(0x241);else{if(_0x552ecc===_0x53a23e(0x1a8))document[_0x53a23e(0x28d)]('wdbChart')[_0x53a23e(0x27a)][_0x53a23e(0x1a5)]='block',document[_0x53a23e(0x28d)](_0x53a23e(0x224))[_0x53a23e(0x27a)]['height']=_0x53a23e(0x1d1);else{if(_0x552ecc===_0x53a23e(0x2a7))stopChart=!![];else{if(_0x552ecc===_0x53a23e(0x24c))stopChart=![];else _0x552ecc===_0x53a23e(0x1e3)&&(betsChart=0x0,profitChart=0x0,drawChart());}}}}function toggleHistory(_0x580154){const _0x2eb3fa=_0x391689;if(_0x580154==='hide')document['getElementById'](_0x2eb3fa(0x224))[_0x2eb3fa(0x27a)][_0x2eb3fa(0x1a5)]='none',document[_0x2eb3fa(0x28d)]('wdbChart')[_0x2eb3fa(0x27a)][_0x2eb3fa(0x25e)]=_0x2eb3fa(0x241);else{if(_0x580154===_0x2eb3fa(0x1a8))document[_0x2eb3fa(0x28d)](_0x2eb3fa(0x224))[_0x2eb3fa(0x27a)]['display']=_0x2eb3fa(0x25f),document[_0x2eb3fa(0x28d)](_0x2eb3fa(0x1d6))[_0x2eb3fa(0x27a)][_0x2eb3fa(0x25e)]='190px';else{if(_0x580154==='stop')stopHistory=!![];else{if(_0x580154===_0x2eb3fa(0x24c))stopHistory=![];else _0x580154===_0x2eb3fa(0x199)&&(document[_0x2eb3fa(0x28d)]('wdbHistory')[_0x2eb3fa(0x19a)]='');}}}}function toggleLog(_0x3c0d1e){const _0x362132=_0x391689;if(_0x3c0d1e===_0x362132(0x2a7))stopLog=!![];else{if(_0x3c0d1e==='start')stopLog=![];else _0x3c0d1e==='clear'&&(document['getElementById'](_0x362132(0x244))[_0x362132(0x19a)]='');}}async function handleAdvanced(){const _0x1016d7=_0x391689;return chance=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x2be))['value']),chanceOnWinCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x26a))[_0x1016d7(0x245)],chanceOnWinCheck?chanceOnWin=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x2b7))['value']):chanceOnWin=chance,chanceOnWinBets=Number(document[_0x1016d7(0x28d)]('advancedChanceOnWinBets')[_0x1016d7(0x2f5)]),chanceOnLoseCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x2d2))[_0x1016d7(0x245)],chanceOnLoseCheck?chanceOnLose=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x1ec))[_0x1016d7(0x2f5)]):chanceOnLose=chance,chanceOnLoseBets=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x1e0))[_0x1016d7(0x2f5)]),multiOnWinCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x21f))['checked'],multiOnWinCheck?multiOnWin=Number(document['getElementById'](_0x1016d7(0x2df))['value']):multiOnWin=0x1,multiOnWinBets=Number(document[_0x1016d7(0x28d)]('advancedMultiOnWinBets')[_0x1016d7(0x2f5)]),multiOnLoseCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x236))['checked'],multiOnLoseCheck?multiOnLose=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x27d))[_0x1016d7(0x2f5)]):multiOnLose=0x1,multiOnLoseBets=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x26e))[_0x1016d7(0x2f5)]),betHighOnBetCheck=document[_0x1016d7(0x28d)]('advancedBetHighOnBetCheck')[_0x1016d7(0x245)],betHighOnBetCheck&&(betHighOnBet=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x2ce))[_0x1016d7(0x2f5)]),bets%betHighOnBet===0x0&&(bethigh=!bethigh)),betHighOnProfitCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x2f3))[_0x1016d7(0x245)],betHighOnProfitCheck&&(betHighOnProfit=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x246))['value']),profit>=betHighOnProfit&&(bethigh=!bethigh)),resetstatsOnProfitCheck=document[_0x1016d7(0x28d)]('resetstatsOnProfitCheck')['checked'],resetstatsOnProfitCheck&&(resetstatsOnProfit=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x254))[_0x1016d7(0x2f5)]),profit>=resetstatsOnProfit&&resetstats()),stopRollNumberCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x261))[_0x1016d7(0x245)],stopRollNumberCheck&&(stopRollNumber=Number(document[_0x1016d7(0x28d)]('advancedStopRollNumber')[_0x1016d7(0x2f5)]),lastBet[_0x1016d7(0x20f)]===stopRollNumber&&(stop(),log(_0x1016d7(0x1c5)+stopRollNumber))),stopStreakCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x1f0))[_0x1016d7(0x245)],stopStreakCheck&&(stopStreak=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x26b))[_0x1016d7(0x2f5)]),stopStreak>0x0?currentstreak>=stopStreak&&(stop(),log(_0x1016d7(0x250)+stopStreak)):currentstreak<=stopStreak&&(stop(),log(_0x1016d7(0x250)+stopStreak))),stopOnBetsCheck=document[_0x1016d7(0x28d)]('advancedStopOnBetsCheck')['checked'],stopOnBetsCheck&&(stopOnBets=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x1b1))[_0x1016d7(0x2f5)]),bets>=stopOnBets&&(stop(),log(_0x1016d7(0x1ed)+stopOnBets+_0x1016d7(0x1da)))),stopOnWinsCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x2c6))[_0x1016d7(0x245)],stopOnWinsCheck&&(stopOnWins=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x2b3))['value']),winstreak>=stopOnWins&&(stop(),log(_0x1016d7(0x1ed)+stopOnWins+_0x1016d7(0x2b2)))),stopOnLoseCheck=document['getElementById'](_0x1016d7(0x21a))[_0x1016d7(0x245)],stopOnLoseCheck&&(stopOnLose=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x2bb))[_0x1016d7(0x2f5)]),losestreak>=stopOnLose&&(stop(),log(_0x1016d7(0x1ed)+stopOnLose+_0x1016d7(0x1ae)))),stopOnProfitCheck=document[_0x1016d7(0x28d)]('stopOnProfitCheck')[_0x1016d7(0x245)],stopOnProfitCheck&&(stopOnProfit=Number(document['getElementById'](_0x1016d7(0x26c))[_0x1016d7(0x2f5)]),profit>=stopOnProfit&&(stop(),log(_0x1016d7(0x2eb)+stopOnProfit))),stopOnBalanceCheck=document[_0x1016d7(0x28d)]('stopOnBalanceCheck')[_0x1016d7(0x245)],stopOnBalanceCheck&&(stopOnBalance=Number(document['getElementById'](_0x1016d7(0x197))[_0x1016d7(0x2f5)]),balance>=stopOnBalance&&(stop(),log(_0x1016d7(0x1d9)+stopOnBalance))),win?(betHighOnWinCheck=document['getElementById']('advancedBetHighOnWinCheck')[_0x1016d7(0x245)],betHighOnWinCheck&&(betHighOnWin=Number(document['getElementById'](_0x1016d7(0x1fc))[_0x1016d7(0x2f5)]),winstreak%betHighOnWin===0x0&&(bethigh=!bethigh)),winstreak%chanceOnWinBets===0x0&&(chance=chanceOnWin),multiOnWinCheck?winstreak%multiOnWinBets===0x0&&(nextbet=previousbet*multiOnWin):nextbet=basebet):(betHighOnLoseCheck=document[_0x1016d7(0x28d)](_0x1016d7(0x1c4))[_0x1016d7(0x245)],betHighOnLoseCheck&&(betHighOnLose=Number(document[_0x1016d7(0x28d)](_0x1016d7(0x20a))['value']),losestreak%betHighOnLose===0x0&&(bethigh=!bethigh)),losestreak%chanceOnLoseBets===0x0&&(chance=chanceOnLose),multiOnLoseCheck?losestreak%multiOnLoseBets===0x0&&(nextbet=previousbet*multiOnLose):nextbet=basebet),_0x1016d7(0x23d);}function changeCoin(){const _0x936e3=_0x391689;coin=document['getElementById'](_0x936e3(0x1ff))[_0x936e3(0x2f5)],currency=String(coin)['toLowerCase'](),fengari[_0x936e3(0x2a2)]('currency=\x22'+currency+'\x22')(),checkbalance();}async function handleStats(){const _0x4e4e57=_0x391689;bets++,betsChart++,wdbSpeed[_0x4e4e57(0x20b)]++,lastBet[_0x4e4e57(0x2cc)]=target,lastBet['Target']=target,lastBet[_0x4e4e57(0x20f)]=result,lastBet[_0x4e4e57(0x2fd)]=result,lastBet[_0x4e4e57(0x253)]=currentprofit,lastBet[_0x4e4e57(0x23c)]=currentprofit,lastBet['Nonce']=lastBet[_0x4e4e57(0x22c)],lastBet['Id']=lastBet['id'],balance+=currentprofit,profit+=currentprofit,profitChart+=currentprofit,wagered+=nextbet,partialprofit+=currentprofit;if(game===_0x4e4e57(0x287)){if(bethigh)lastBet[_0x4e4e57(0x20f)]>lastBet[_0x4e4e57(0x2cc)]?win=!![]:win=![];else lastBet[_0x4e4e57(0x20f)]<lastBet[_0x4e4e57(0x2cc)]?win=!![]:win=![];}else{if(game==='plinko')lastBet[_0x4e4e57(0x253)]>0x0?win=!![]:win=![];else lastBet['result']>=lastBet['target']?win=!![]:win=![];}win?(color='green',wins++,winstreak++,losestreak=0x0,currentstreak=winstreak):(color=_0x4e4e57(0x1f3),losses++,losestreak++,winstreak=0x0,currentstreak=0x0-losestreak,previousbet>maxLosseAmount&&(maxLosseAmount=previousbet));nextbet>maxBetAmount&&(maxBetAmount=nextbet);winstreak>maxwinstreak&&(maxwinstreak=winstreak);losestreak>maxlosestreak&&(maxlosestreak=losestreak);balance<minbalance&&(minbalance=balance);balance>maxbalance&&(maxbalance=balance);profit<minprofit&&(minprofit=profit);profit>maxprofit&&(maxprofit=profit);const _0x31bcb8=await updateStats(),_0x200535=await updateChart(),_0x4358b3=await updateHistory();Promise['all']([_0x31bcb8,_0x200535,_0x4358b3])[_0x4e4e57(0x1ce)](async _0x4f8542=>{try{if(mode==='lua')await updateLua();else{if(mode==='js')await dobet();else mode==='advanced'&&await handleAdvanced();}if(win&&sOW)return stop();if(run)return playBet();}catch(_0x2dfb58){stop(),log(_0x2dfb58);}});}async function updateStats(){const _0x151fd9=_0x391689,_0x4ee067=profit===0x0?darkMode?_0x151fd9(0x1c9):_0x151fd9(0x2f9):profit<0x0?_0x151fd9(0x1f3):_0x151fd9(0x24a),_0x3cd7b3=currentstreak===0x0?darkMode?_0x151fd9(0x1c9):_0x151fd9(0x2f9):currentstreak<0x0?'red':'green',_0x54f590=maxwinstreak>0x0?'green':'black';document[_0x151fd9(0x28d)](_0x151fd9(0x1e9))[_0x151fd9(0x27a)][_0x151fd9(0x1ad)]=_0x54f590;const _0x5cb6fb=maxlosestreak>0x0?_0x151fd9(0x1f3):_0x151fd9(0x2f9);return document[_0x151fd9(0x28d)]('wdbHighLoseStreak')['style']['color']=_0x5cb6fb,document['getElementById'](_0x151fd9(0x216))[_0x151fd9(0x233)]=wagered['toFixed'](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x18d))[_0x151fd9(0x233)]=balance[_0x151fd9(0x262)](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x2e3))['style'][_0x151fd9(0x1ad)]=_0x4ee067,document[_0x151fd9(0x28d)](_0x151fd9(0x2e3))[_0x151fd9(0x233)]=profit[_0x151fd9(0x262)](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x2fb))[_0x151fd9(0x233)]=maxBetAmount['toFixed'](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x291))[_0x151fd9(0x233)]=maxLosseAmount[_0x151fd9(0x262)](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x18c))[_0x151fd9(0x233)]=bets,document[_0x151fd9(0x28d)]('wdbWins')['innerText']=wins,document[_0x151fd9(0x28d)](_0x151fd9(0x2f0))[_0x151fd9(0x233)]=losses,document[_0x151fd9(0x28d)](_0x151fd9(0x215))[_0x151fd9(0x27a)][_0x151fd9(0x1ad)]=_0x3cd7b3,document[_0x151fd9(0x28d)]('wdbCurrentStreak')[_0x151fd9(0x233)]=currentstreak,document[_0x151fd9(0x28d)]('wdbHighWinStreak')['innerText']=maxwinstreak,document[_0x151fd9(0x28d)](_0x151fd9(0x1d7))[_0x151fd9(0x233)]=maxlosestreak,document[_0x151fd9(0x28d)](_0x151fd9(0x2ee))[_0x151fd9(0x233)]=minbalance['toFixed'](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x289))[_0x151fd9(0x233)]=maxbalance[_0x151fd9(0x262)](decimalAmountView),document[_0x151fd9(0x28d)]('wdbMinProfit')[_0x151fd9(0x233)]=minprofit['toFixed'](decimalAmountView),document[_0x151fd9(0x28d)](_0x151fd9(0x18e))['innerText']=maxprofit['toFixed'](decimalAmountView),percentWagered=wagered/startBalance,percentWagered=Math['round']((percentWagered+Number[_0x151fd9(0x295)])*0x64)/0x64,(String(percentWagered)===_0x151fd9(0x1de)||String(percentWagered)===_0x151fd9(0x2e8))&&(percentWagered=0x0),document['getElementById']('wdbPercentWagered')[_0x151fd9(0x233)]=percentWagered,percentProfit=profit/startBalance*0x64,percentProfit=Math[_0x151fd9(0x1cd)]((percentProfit+Number['EPSILON'])*0x64)/0x64,(String(percentProfit)===_0x151fd9(0x1de)||String(percentProfit)==='NaN')&&(percentProfit=0x0),document[_0x151fd9(0x28d)](_0x151fd9(0x196))['style'][_0x151fd9(0x1ad)]=_0x4ee067,document[_0x151fd9(0x28d)](_0x151fd9(0x1aa))[_0x151fd9(0x233)]=percentProfit,'updateStats\x20ok';}function drawChart(){const _0x23c740=_0x391689;dps=[{'x':betsChart,'y':profitChart}],chart=new CanvasJS['Chart']('wdbChart',{'theme':darkMode?'dark1':'light1','axisY':{'includeZero':![]},'data':[{'type':_0x23c740(0x29f),'markerSize':0x0,'dataPoints':dps}]}),chart['render']();}async function updateChart(){const _0x53b54d=_0x391689;return!stopChart&&(dps[_0x53b54d(0x1c7)]({'x':betsChart,'y':profitChart,'color':color}),dps[_0x53b54d(0x2e9)]>maxRows&&dps[_0x53b54d(0x1e4)](),dps[dps[_0x53b54d(0x2e9)]-0x2]&&(dps[dps[_0x53b54d(0x2e9)]-0x2]['lineColor']=color),chart[_0x53b54d(0x2f4)]()),_0x53b54d(0x1fd);}async function updateHistory(){const _0x44102f=_0x391689;if(!stopHistory){const _0x48c785=game==='dice'?bethigh?'>':'<':'>',_0xa9dd8e=bethigh?_0x44102f(0x208)+bets+_0x44102f(0x1b6):_0x44102f(0x208)+bets+_0x44102f(0x1e1),_0x2bd444=''+(havePlinkoRows?plinkoRow+_0x44102f(0x188):'')+plinkoRisk,_0x5647cb='<td>'+bets+_0x44102f(0x1f2)+Number(lastBet[_0x44102f(0x1a6)])[_0x44102f(0x262)](decimalAmountView)+_0x44102f(0x1f2)+_0xa9dd8e+_0x44102f(0x1f2)+(game===_0x44102f(0x257)?_0x2bd444:Number(lastBet[_0x44102f(0x1f8)])[_0x44102f(0x262)](decimalChanceView))+_0x44102f(0x1f2)+Number(lastBet[_0x44102f(0x21b)])['toFixed'](decimalChanceView)+_0x44102f(0x1f2)+Number(lastBet[_0x44102f(0x253)])[_0x44102f(0x262)](decimalAmountView)+_0x44102f(0x1f2)+(game==='plinko'?_0x2bd444:_0x48c785+Number(target)[_0x44102f(0x262)](decimalTargetResult))+_0x44102f(0x1f2)+Number(result)['toFixed'](decimalTargetResult)+_0x44102f(0x1f2)+lastBet[_0x44102f(0x22c)]+_0x44102f(0x1f2)+lastBet['id']+_0x44102f(0x2d8),_0x8e7b89=document[_0x44102f(0x2f1)]('tr');win?_0x8e7b89['style'][_0x44102f(0x2d3)]=_0x44102f(0x252):_0x8e7b89[_0x44102f(0x27a)]['backgroundColor']=_0x44102f(0x1bb);_0x8e7b89['innerHTML']=_0x5647cb,document[_0x44102f(0x28d)]('wdbHistory')[_0x44102f(0x1bc)](_0x8e7b89,document['getElementById'](_0x44102f(0x189))[_0x44102f(0x2f7)][0x0]);const _0x2bd234=document[_0x44102f(0x1b4)](_0x44102f(0x229))['rows'];_0x2bd234[_0x44102f(0x2e9)]>maxRows&&document[_0x44102f(0x1b4)](_0x44102f(0x229))[_0x44102f(0x1eb)][_0x44102f(0x1e5)]();}return _0x44102f(0x276);}function log(_0x2a55b1){const _0x4a5c2e=_0x391689,_0x5ee802=document[_0x4a5c2e(0x28d)](_0x4a5c2e(0x244)),_0x44d78d=document[_0x4a5c2e(0x2f1)]('li');_0x44d78d[_0x4a5c2e(0x233)]=''+_0x2a55b1,document['getElementById'](_0x4a5c2e(0x244))[_0x4a5c2e(0x1bc)](_0x44d78d,_0x5ee802[_0x4a5c2e(0x2f7)][0x0]);const _0x3f2659=_0x5ee802['getElementsByTagName']('li');_0x3f2659[_0x4a5c2e(0x2e9)]>maxRows&&document[_0x4a5c2e(0x28d)]('wdbLog')[_0x4a5c2e(0x2b8)](_0x5ee802['lastChild']);}async function start(){const _0x4facd3=_0x391689;try{if(!run){document[_0x4facd3(0x28d)](_0x4facd3(0x292))['innerText']=_0x4facd3(0x18b),document[_0x4facd3(0x28d)](_0x4facd3(0x1ff))[_0x4facd3(0x2e6)]=!![],document['getElementById']('wdbMenuMode')[_0x4facd3(0x2e6)]=!![],document[_0x4facd3(0x28d)](_0x4facd3(0x2d9))[_0x4facd3(0x2e6)]=!![],document[_0x4facd3(0x28d)](_0x4facd3(0x288))[_0x4facd3(0x2e6)]=!![],document[_0x4facd3(0x282)](_0x4facd3(0x2ac))['forEach'](_0x4ecfce=>_0x4ecfce[_0x4facd3(0x2e6)]=!![]),document[_0x4facd3(0x282)]('#wdbOpenScript')[_0x4facd3(0x2ab)](_0x4b30e9=>_0x4b30e9[_0x4facd3(0x2e6)]=!![]),run=!![],sOW=![],wdbTimer[_0x4facd3(0x2a7)](),wdbTimer[_0x4facd3(0x24c)](),wdbSpeed[_0x4facd3(0x2a7)](),wdbSpeed[_0x4facd3(0x24c)]();if(mode===_0x4facd3(0x205))diceScript=luaEditor[_0x4facd3(0x1c3)](),diceScript=diceScript[_0x4facd3(0x2de)](/!=/g,'~=')[_0x4facd3(0x2de)](/!/g,_0x4facd3(0x247))[_0x4facd3(0x2de)](/([a-zA-Z]*[0-9]*\s*)\+\=(\s*[a-zA-Z]*[0-9]*)/g,_0x4facd3(0x1fa))[_0x4facd3(0x2de)](/([a-zA-Z]*[0-9]*\s*)\-\=(\s*[a-zA-Z]*[0-9]*)/g,'$1=$1-$2\x20')[_0x4facd3(0x2de)](/([a-zA-Z]*[0-9]*\s*)\*\=(\s*[a-zA-Z]*[0-9]*)/g,_0x4facd3(0x2fc))['replace'](/([a-zA-Z]*[0-9]*\s*)\/\=(\s*[a-zA-Z]*[0-9]*)/g,_0x4facd3(0x2cf)),fengari['load'](diceScript)();else{if(mode==='js'){document[_0x4facd3(0x28d)](_0x4facd3(0x2da))!==null&&document[_0x4facd3(0x28d)](_0x4facd3(0x2da))[_0x4facd3(0x1e5)]();diceScript=jsEditor['getValue']();let _0x163fbe=document[_0x4facd3(0x2f1)]('script');_0x163fbe['id']='wdbRunningScript',_0x163fbe[_0x4facd3(0x19a)]=diceScript,document[_0x4facd3(0x1d8)][_0x4facd3(0x240)](_0x163fbe);}else mode==='advanced'&&(basebet=Number(document[_0x4facd3(0x28d)](_0x4facd3(0x264))[_0x4facd3(0x2f5)]),nextbet=basebet,chance=Number(document[_0x4facd3(0x28d)]('advancedChance')[_0x4facd3(0x2f5)]),bethigh=document['querySelector'](_0x4facd3(0x194))[_0x4facd3(0x245)]);}if(run)return playBet();}}catch(_0xfee022){stop(),log(_0xfee022);}}function stop(){const _0x591131=_0x391689;run&&(run=![],sOW=![],wdbSpeed['pause'](),wdbTimer[_0x591131(0x2ba)](),document[_0x591131(0x28d)](_0x591131(0x1ff))['disabled']=![],document[_0x591131(0x28d)](_0x591131(0x20e))[_0x591131(0x2e6)]=![],document[_0x591131(0x28d)](_0x591131(0x2d9))[_0x591131(0x2e6)]=![],document[_0x591131(0x28d)](_0x591131(0x288))[_0x591131(0x2e6)]=![],document[_0x591131(0x282)](_0x591131(0x2ac))['forEach'](_0x4ea0d7=>_0x4ea0d7[_0x591131(0x2e6)]=![]),document[_0x591131(0x282)](_0x591131(0x2a5))[_0x591131(0x2ab)](_0x3437bc=>_0x3437bc[_0x591131(0x2e6)]=![]),document[_0x591131(0x28d)](_0x591131(0x206))[_0x591131(0x2e6)]=![]);}async function resume(_0xfdb775){const _0x44b98c=_0x391689;if(!run)return document[_0x44b98c(0x28d)](_0x44b98c(0x1ff))['disabled']=!![],document[_0x44b98c(0x28d)](_0x44b98c(0x20e))[_0x44b98c(0x2e6)]=!![],document[_0x44b98c(0x28d)]('wdbStartButton')['disabled']=!![],document[_0x44b98c(0x28d)](_0x44b98c(0x288))['disabled']=!![],document['querySelectorAll'](_0x44b98c(0x2ac))[_0x44b98c(0x2ab)](_0x46a714=>_0x46a714[_0x44b98c(0x2e6)]=!![]),document['querySelectorAll'](_0x44b98c(0x2a5))[_0x44b98c(0x2ab)](_0x58866d=>_0x58866d[_0x44b98c(0x2e6)]=!![]),!_0xfdb775&&(log(_0x44b98c(0x1c0)),await new Promise(_0x5a5c35=>setTimeout(_0x5a5c35,0x1388))),run=!![],sOW=![],wdbSpeed[_0x44b98c(0x24c)](),wdbTimer[_0x44b98c(0x24c)](),playBet();}function stopOnWin(){const _0x1896cb=_0x391689;sOW=!![],run&&(document[_0x1896cb(0x28d)](_0x1896cb(0x206))[_0x1896cb(0x2e6)]=!![]);}async function playBet(){const _0x32e0b7=_0x391689;try{mode===_0x32e0b7(0x205)&&(nextbet=fengari[_0x32e0b7(0x2a2)](_0x32e0b7(0x1c6))(),chance=fengari[_0x32e0b7(0x2a2)](_0x32e0b7(0x2ae))(),bethigh=fengari['load'](_0x32e0b7(0x258))());nextbet=Number(nextbet),chance=Number(chance),previousbet=nextbet,lastBet[_0x32e0b7(0x1a6)]=nextbet,lastBet[_0x32e0b7(0x2c5)]=nextbet,lastBet[_0x32e0b7(0x1f8)]=chance,lastBet['Chance']=chance;if(!stopLog){if(game===_0x32e0b7(0x257)){const _0x32b17f=''+(havePlinkoRows?plinkoRow+'\x20|\x20':'')+plinkoRisk,_0x1e8f80=_0x32e0b7(0x200)+Number(lastBet[_0x32e0b7(0x1a6)])['toFixed'](decimalAmountView)+_0x32e0b7(0x297)+_0x32b17f+'\x20to\x20win';log(_0x1e8f80);}else{const _0x5c5431=game==='dice'?bethigh?_0x32e0b7(0x281):_0x32e0b7(0x234):_0x32e0b7(0x281),_0x247396=_0x32e0b7(0x200)+Number(lastBet[_0x32e0b7(0x1a6)])[_0x32e0b7(0x262)](decimalAmountView)+_0x32e0b7(0x297)+Number(lastBet[_0x32e0b7(0x1f8)])['toFixed'](decimalChanceView)+_0x32e0b7(0x2fa)+_0x5c5431;log(_0x247396);}}if(run)return sendBet();}catch(_0x26fce3){stop(),log(_0x26fce3);}}function resetall(){const _0x503f1f=_0x391689;document[_0x503f1f(0x28d)](_0x503f1f(0x292))[_0x503f1f(0x233)]=_0x503f1f(0x18b),run?(wdbSpeed[_0x503f1f(0x2a7)](),wdbSpeed['start'](),wdbTimer[_0x503f1f(0x2a7)](),wdbTimer[_0x503f1f(0x24c)]()):(wdbSpeed['stop'](),wdbTimer[_0x503f1f(0x2a7)]()),resetstats(),toggleChart(_0x503f1f(0x1e3)),toggleHistory(_0x503f1f(0x199)),toggleLog('clear');}function resetchart(){const _0x437df2=_0x391689;return toggleChart(_0x437df2(0x1e3));}function resethistory(){const _0x4002e7=_0x391689;return toggleHistory(_0x4002e7(0x199));}function resetlog(){const _0x2ac6ee=_0x391689;return toggleLog(_0x2ac6ee(0x199));}function resetstats(){return startBalance=balance,wagered=0x0,percentWagered=0x0,profit=0x0,percentProfit=0x0,maxBetAmount=0x0,maxLosseAmount=0x0,maxwinstreak=0x0,maxlosestreak=0x0,minbalance=balance,maxbalance=balance,minprofit=0x0,maxprofit=0x0,bets=0x0,wins=0x0,losses=0x0,currentstreak=0x0,updateStats();}function resetpartialprofit(){partialprofit=0x0;}function invest(_0x55df3c){return _0x55df3c;}function ching(){return wdbSound['play']();}function sleep(_0x749c1b){return new Promise(_0x333d9e=>setTimeout(_0x333d9e,_0x749c1b*0x3e8));}function initLua(){const _0x310497=_0x391689;fengari[_0x310497(0x2a2)](_0x310497(0x231))(),fengari[_0x310497(0x2a2)](_0x310497(0x28e))(),fengari[_0x310497(0x2a2)](_0x310497(0x2a4))(),fengari[_0x310497(0x2a2)](_0x310497(0x217))(),fengari[_0x310497(0x2a2)](_0x310497(0x213))(),fengari[_0x310497(0x2a2)](_0x310497(0x2c3))(),fengari[_0x310497(0x2a2)]('function\x20resetchart()\x0ajs.global:resetchart()\x0aend')(),fengari[_0x310497(0x2a2)](_0x310497(0x2d1))(),fengari[_0x310497(0x2a2)]('function\x20resetlog()\x0ajs.global:resetlog()\x0aend')(),fengari['load']('function\x20resetall()\x0ajs.global:resetall()\x0aend')(),fengari[_0x310497(0x2a2)]('function\x20ching()\x0ajs.global:ching()\x0aend')(),fengari['load']('function\x20log(msg)\x0ajs.global:log(msg)\x0aend')(),fengari['load'](_0x310497(0x1f6))(),fengari[_0x310497(0x2a2)](_0x310497(0x248))(),fengari[_0x310497(0x2a2)]('clock\x20=\x20os.clock\x0a\x20\x20function\x20sleep(n)\x0a\x20\x20\x20\x20local\x20t0\x20=\x20clock()\x0a\x20\x20\x20\x20while\x20clock()\x20-\x20t0\x20<=\x20n\x20do\x20end\x0a\x20\x20end')(),fengari[_0x310497(0x2a2)](_0x310497(0x2c1))();const _0x30ae97=location[_0x310497(0x191)][_0x310497(0x2de)]('www.','');let _0x5f5922=_0x30ae97[_0x310497(0x2b4)]('.');casino=_0x30ae97[_0x310497(0x1dd)](0x0,_0x5f5922),fengari[_0x310497(0x2a2)](_0x310497(0x1ee)+casino+'\x22')();}async function updateLua(){const _0x5e3b6c=_0x391689;return fengari[_0x5e3b6c(0x2a2)](_0x5e3b6c(0x2d0)+win+_0x5e3b6c(0x251)+bets+_0x5e3b6c(0x1b8)+wins+'\x0a\x20\x20\x20\x20losses='+losses+_0x5e3b6c(0x2c0)+winstreak+'\x0a\x20\x20\x20\x20losestreak='+losestreak+_0x5e3b6c(0x2bd)+currentstreak+_0x5e3b6c(0x2fe)+balance+'\x0a\x20\x20\x20\x20minbalance='+minbalance+_0x5e3b6c(0x298)+maxbalance+_0x5e3b6c(0x2a8)+minprofit+_0x5e3b6c(0x1a1)+maxprofit+'\x0a\x20\x20\x20\x20chance='+chance+_0x5e3b6c(0x237)+bethigh+_0x5e3b6c(0x1ef)+nextbet+_0x5e3b6c(0x2bc)+previousbet+_0x5e3b6c(0x19d)+profit+_0x5e3b6c(0x1a7)+currentprofit+'\x0a\x20\x20\x20\x20partialprofit='+partialprofit+'\x0a\x20\x20\x20\x20wagered='+wagered+_0x5e3b6c(0x29c))(),fengari['load']('\x0a\x20\x20\x20\x20lastBet={\x0a\x20\x20\x20\x20\x20\x20amount='+lastBet['amount']+_0x5e3b6c(0x223)+lastBet[_0x5e3b6c(0x1a6)]+_0x5e3b6c(0x25c)+lastBet['chance']+_0x5e3b6c(0x2c4)+lastBet[_0x5e3b6c(0x1f8)]+_0x5e3b6c(0x2b6)+lastBet[_0x5e3b6c(0x21b)]+_0x5e3b6c(0x2a6)+lastBet[_0x5e3b6c(0x21b)]+_0x5e3b6c(0x1dc)+lastBet['profit']+_0x5e3b6c(0x203)+lastBet[_0x5e3b6c(0x253)]+_0x5e3b6c(0x2dd)+lastBet[_0x5e3b6c(0x2cc)]+',\x0a\x20\x20\x20\x20\x20\x20Target=\x20'+lastBet['target']+_0x5e3b6c(0x1e6)+lastBet['result']+',\x0a\x20\x20\x20\x20\x20\x20Result='+lastBet['result']+_0x5e3b6c(0x27f)+lastBet[_0x5e3b6c(0x22c)]+_0x5e3b6c(0x22a)+lastBet['nonce']+_0x5e3b6c(0x23a)+lastBet['id']+_0x5e3b6c(0x2d6)+lastBet['id']+_0x5e3b6c(0x1b5))(),fengari[_0x5e3b6c(0x2a2)](_0x5e3b6c(0x219))(),fengari[_0x5e3b6c(0x2a2)](_0x5e3b6c(0x271))()&&(currency=fengari[_0x5e3b6c(0x2a2)](_0x5e3b6c(0x271))(),coin=String(currency)[_0x5e3b6c(0x198)]()),fengari['load'](_0x5e3b6c(0x1ca))()?(scriptname=fengari[_0x5e3b6c(0x2a2)]('return\x20scriptname')(),document['getElementById'](_0x5e3b6c(0x29b))['innerText']=_0x5e3b6c(0x221)+scriptname):(scriptname='',document[_0x5e3b6c(0x28d)](_0x5e3b6c(0x29b))[_0x5e3b6c(0x233)]=''),fengari['load'](_0x5e3b6c(0x28b))()&&(plinkoRisk=fengari['load'](_0x5e3b6c(0x28b))()),fengari[_0x5e3b6c(0x2a2)]('return\x20plinkoRow')()&&(plinkoRow=fengari[_0x5e3b6c(0x2a2)](_0x5e3b6c(0x18f))()),'updateLua\x20done';}function randomString(_0x2bbdb1,_0x41b3d2){const _0x2038b2=_0x391689,_0x8c41c9=_0x2038b2(0x27e)[_0x2038b2(0x198)](),_0x44e817=_0x2038b2(0x27e)[_0x2038b2(0x1dd)](0x0,0x6);let _0x48390d='',_0x223484='';!_0x41b3d2&&(_0x48390d=_0x2038b2(0x280)+_0x8c41c9);_0x41b3d2==='alphabet'&&(_0x48390d=_0x2038b2(0x27e)+_0x8c41c9);_0x41b3d2==='numeric'&&(_0x48390d=_0x2038b2(0x2db));_0x41b3d2==='hex'&&(_0x48390d=_0x2038b2(0x2db)+_0x44e817);for(let _0x20981d=0x0;_0x20981d<_0x2bbdb1;_0x20981d++){_0x223484+=_0x48390d[_0x2038b2(0x226)](Math[_0x2038b2(0x1d0)](Math[_0x2038b2(0x210)]()*_0x48390d[_0x2038b2(0x2e9)]));}return _0x223484;}function setCookie(_0x14aca3,_0x59013c,_0x5cbd1a){const _0x34974c=_0x391689,_0x4d76cb=new Date();_0x4d76cb['setTime'](_0x4d76cb[_0x34974c(0x1d2)]()+_0x5cbd1a*0x18*0x3c*0x3c*0x3e8);let _0x425f56=_0x34974c(0x27c)+_0x4d76cb[_0x34974c(0x2aa)]();document['cookie']=_0x14aca3+'='+_0x59013c+';'+_0x425f56+_0x34974c(0x220);}function getCookie(_0x4fcbba){const _0x45ff26=_0x391689;_0x4fcbba=_0x4fcbba+'=';let _0xc54ee2=decodeURIComponent(document[_0x45ff26(0x267)]),_0x1abf76=_0xc54ee2[_0x45ff26(0x2b0)](';');for(let _0x39896f=0x0;_0x39896f<_0x1abf76['length'];_0x39896f++){let _0x8316d9=_0x1abf76[_0x39896f];while(_0x8316d9[_0x45ff26(0x226)](0x0)==='\x20'){_0x8316d9=_0x8316d9[_0x45ff26(0x255)](0x1);}if(_0x8316d9[_0x45ff26(0x2b4)](_0x4fcbba)===0x0)return _0x8316d9[_0x45ff26(0x255)](_0x4fcbba[_0x45ff26(0x2e9)],_0x8316d9['length']);}return'';}function saveScript(){const _0x3f7f50=_0x391689;let _0x51af9f=null;mode===_0x3f7f50(0x205)?_0x51af9f=luaEditor[_0x3f7f50(0x1c3)]():_0x51af9f=jsEditor[_0x3f7f50(0x1c3)]();let _0x5edb79=document['createElement']('a');_0x5edb79[_0x3f7f50(0x25b)]=window['URL'][_0x3f7f50(0x222)](new Blob([_0x51af9f],{'type':_0x3f7f50(0x2e7)})),_0x5edb79[_0x3f7f50(0x242)]=mode===_0x3f7f50(0x205)?_0x3f7f50(0x227)+Date['now']()+_0x3f7f50(0x2d7):_0x3f7f50(0x227)+Date[_0x3f7f50(0x270)]()+_0x3f7f50(0x1a9),_0x5edb79[_0x3f7f50(0x1b0)]();}function getErrMsg(_0x63a3da){const _0x35a08e=_0x391689,_0x4bf94b=_0x63a3da['response']&&_0x63a3da[_0x35a08e(0x29d)][_0x35a08e(0x1be)]&&_0x63a3da['response'][_0x35a08e(0x1be)]['message']||_0x63a3da['message']||_0x63a3da['toString']();return _0x4bf94b;}token=null;async function beforeWork(){const _0x8b7494=_0x391689;document[_0x8b7494(0x19b)][0x1]['cssRules'][0x1a91][_0x8b7494(0x27a)][_0x8b7494(0x24b)](_0x8b7494(0x23e)),axios[_0x8b7494(0x28a)][_0x8b7494(0x2ed)]={'x-csrf-token':document[_0x8b7494(0x1b4)](_0x8b7494(0x19e))[_0x8b7494(0x2d5)]},await getNewToken();}async function getListCoin(){const _0x3cb543=_0x391689;return document[_0x3cb543(0x282)](_0x3cb543(0x1d4))['forEach'](_0x218415=>{const _0x4e2976=_0x3cb543;coins['push'](_0x218415[_0x4e2976(0x2af)](_0x4e2976(0x279)));}),coins=coins[_0x3cb543(0x228)](),coin=coins[0x0],drawSelectCoin(),checkbalance();}async function checkbalance(){const _0x3cd4da=_0x391689;try{const _0x320267={'currency':coin},{data:_0x16427f}=await axios['post'](_0x3cd4da(0x2ea),_0x320267);return balance=Number(_0x16427f['result']['balance']),fengari[_0x3cd4da(0x2a2)](_0x3cd4da(0x1cc)+balance)(),startBalance=balance,minbalance=balance,fengari['load'](_0x3cd4da(0x2f2)+balance)(),maxbalance=balance,fengari[_0x3cd4da(0x2a2)]('maxbalance='+balance)(),updateStats();}catch(_0x539cbc){return log(getErrMsg(_0x539cbc));}}async function resetseed(){const _0x237f2c=_0x391689;try{const _0x38d91c={'authorization':_0x237f2c(0x2c2)+token},_0x191dfe={'clientSeed':randomString(0x10)},{data:_0xe72d09}=await axios[_0x237f2c(0x1d3)]('/api/game-options/change-seeds',_0x191dfe,{'headers':_0x38d91c});if(!_0xe72d09[_0x237f2c(0x1ea)])return log('please\x20reset\x20seed\x20after\x205\x20minutes');}catch(_0x22276d){return stop(),log(getErrMsg(_0x22276d));}}function _0x5d91(){const _0x2a3929=['minutes','8QbmjAh',',\x0a\x20\x20\x20\x20\x20\x20Profit=','setValue','lua','wdbStopOnWinButton','/token/refresh','<input\x20id=\x22bethigh','token','advancedBetHighOnLose','bets','wdbShowVariables','\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22float-right\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22wdb-toggle\x22\x20id=\x22wdbToggleMinimal\x22\x20onclick=\x22toggleMinimalBot(this)\x22>▼</span>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a\x0a\x20\x20<div\x20id=\x22wdbMain\x22>\x0a\x20\x20\x20\x20<div\x20id=\x22wdbMenu\x22>\x0a\x20\x20\x20\x20\x20\x20<select\x20id=\x22wdbMenuMode\x22\x20class=\x22wdb-select\x22\x20onchange=\x27toggleMode(this.value)\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22lua\x22>LUA\x20Mode</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22js\x22>JS\x20Mode</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<option\x20value=\x22advanced\x22>Advanced\x20Mode</option>\x0a\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20<select\x20id=\x22wdbMenuCoin\x22\x20class=\x22wdb-select\x22\x20onchange=\x27changeCoin()\x27>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<option>Loading...</option>\x0a\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Max\x20Record\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22wdbMaxRows\x22\x20value=\x22200\x22\x20onchange=\x22changeMaxRows()\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20id=\x22scriptName\x22></span>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22wdb-menu2\x22>\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Theme<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20onchange=\x22toggleDarkMode()\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Show\x20Stats<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleShowStats\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleShow(\x27stats\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Show\x20Chart<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleShowChart\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleShow(\x27chart\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Show\x20History<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleShowHistory\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleShow(\x27history\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Live\x20Chart<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleLiveChart\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleLive(\x27chart\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Live\x20History<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleLiveHistory\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleLive(\x27history\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x0a\x20\x20\x20\x20\x20\x20<span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Live\x20Log<br\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22switch\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22wdbToggleLiveLog\x22\x20type=\x22checkbox\x22\x20onchange=\x22toggleLive(\x27log\x27)\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22slider\x22></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</label>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resetstats\x27)\x22>Reset\x20Stats</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resetchart\x27)\x22>Reset\x20Chart</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resethistory\x27)\x22>Reset\x20History</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resetlog\x27)\x22>Reset\x20Log</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resetseed\x27)\x22>Reset\x20Seed</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20\x20\x20<span\x20style=\x22padding-top:\x2019px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20onclick=\x22selectFunction(\x27resetall\x27)\x22>Reset\x20All</button>\x0a\x20\x20\x20\x20\x20\x20</span>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22wdb-stats\x22\x20id=\x22wdbStats\x22>\x0a\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Time:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbTime\x22>0:0:0:0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Balance:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbBalance\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Min\x20Balance:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbMinBalance\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Balance:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbMaxBalance\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Wagered:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22>(<span\x20id=\x22wdbPercentWagered\x22>0.00</span>x)\x20<span\x20id=\x22wdbWagered\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Profit:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22\x20id=\x22wdbWrapPercentProfit\x22>(<span\x20id=\x22wdbPercentProfit\x22>0.00</span>%)\x20<span\x20id=\x22wdbProfit\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Min\x20Profit:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbMinProfit\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Profit:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbMaxProfit\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Bets:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbBets\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Losses:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbLosses\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Bet:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbHighBet\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Lose:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbHighLose\x22>0.00000000</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Wins:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbWins\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Current\x20Streak:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbCurrentStreak\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Win\x20Streak:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbHighWinStreak\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-left\x22>Max\x20Lose\x20Streak:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22float-right\x22><span\x20id=\x22wdbHighLoseStreak\x22>0</span></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20class=\x22wdb-flex-container\x22\x20id=\x22wdbWrapControl\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex-grow:\x201;\x20width:\x2050%;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbChart\x22></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapHistory\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<thead>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Bets</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Amount</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>High</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Target\x20Chance</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Roll\x20Chance</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Profit</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Target\x20Number</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Roll\x20Number</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Nonce</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<th>Bet\x20ID</th>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</tr>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</thead>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tbody\x20id=\x22wdbHistory\x22></tbody>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</table>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20style=\x22flex-grow:\x201;\x20width:\x2050%;\x20padding-left:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbTabMenu\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbShowMode\x22\x20onclick=\x22toggleNav(\x27mode\x27)\x22>Mode</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbShowLog\x22\x20onclick=\x22toggleNav(\x27log\x27)\x22>Log</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbShowVariables\x22\x20onclick=\x22toggleNav(\x27variables\x27)\x22>Variables</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbShowFunctions\x22\x20onclick=\x22toggleNav(\x27functions\x27)\x22>Functions</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbShowTips\x22\x20onclick=\x22toggleNav(\x27tips\x27)\x22>Tips</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapMode\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbLUAMode\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x205px\x202px\x205px\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbSaveScriptButton\x22\x20onclick=\x22saveScript()\x22>Save</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20style=\x22margin:\x200\x203px;\x22\x20type=\x22file\x22\x20id=\x22wdbOpenLUAScript\x22\x20accept=\x22.txt,\x20.lua\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22wdbScriptBoxLUA\x22>--\x20Trial\x20version\x20(\x20until\x20serverdown\x20or\x20no-donation\x20)\x20\x0a--\x20Donation\x20\x0a--\x20Doge\x20:\x20DFZxAeTmYpNmNrc8W5yqZH1655aiF2B3ai\x20\x0a--\x20Trx\x20:\x20TAk3aLhDP4EpZQ855Z5R8wFBxi2uKNtupj\x20\x0a--\x20Continues\x20project\x20at\x20least\x20>\x2010$\x20/\x20month\x20any\x20donation\x20\x0a--\x20DONATION\x20=\x200\x20$\x20\x0a\x20scriptname=\x27Free\x20Dice-Bot\x20LUA\x20script\x27\x0achance=49.5\x0abethigh=true\x0abasebet=0.00000001\x0anextbet=basebet\x0a\x0afunction\x20dobet()\x0a\x20\x20if\x20(win)\x20then\x0a\x20\x20\x20\x20nextbet=basebet\x0a\x20\x20else\x0a\x20\x20\x20\x20nextbet=previousbet*2\x0a\x20\x20end\x0aend</textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbJSMode\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22padding:\x205px\x202px\x205px\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x22\x20id=\x22wdbSaveScriptButton\x22\x20onclick=\x22saveScript()\x22>Save</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20style=\x22margin:\x200\x203px;\x22\x20type=\x22file\x22\x20id=\x22wdbOpenJSScript\x22\x20accept=\x22.txt,\x20.js\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22wdbScriptBoxJS\x22>scriptname=\x27example\x20JS\x20script\x27\x0achance=49.5\x0abethigh=true\x0abasebet=0.00000001\x0anextbet=basebet\x0a//\x20currency=\x27trx\x27\x0a//\x20log(casino)\x0a//\x20plinkoRow=8\x20//\x20depend\x20dice\x20site,\x20only\x20for\x20plinko\x20game\x0a//\x20plinkoRisk=\x27low\x27\x20//\x20low,\x20medium,\x20high;\x20only\x20for\x20plinko\x20game\x0a\x0aasync\x20function\x20dobet()\x20{\x0a\x20\x20//\x20log(\x27profit:\x20\x27\x20+\x20profit)\x0a\x20\x20//\x20await\x20sleep(0.2)\x0a\x20\x20if\x20(win)\x20{\x0a\x20\x20\x20\x20nextbet=basebet\x0a\x20\x20}\x20else\x20{\x0a\x20\x20\x20\x20nextbet=previousbet*2\x0a\x20\x20}\x0a}</textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbAdvancedMode\x22\x20class=\x22wdb-advanced\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Chance\x20<input\x20type=\x22number\x22\x20id=\x22advancedChance\x22\x20value=\x2249.5\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Base\x20bet\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22advancedBaseBet\x22\x20value=\x220.00000001\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Bethigh\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedBetHigh\x22\x20checked\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedChanceOnWinCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Set\x20chance\x20to\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x2245.5\x22\x20id=\x22advancedChanceOnWin\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedChanceOnWinBets\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20win\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedChanceOnLoseCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Set\x20chance\x20to\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x2250.5\x22\x20id=\x22advancedChanceOnLose\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedChanceOnLoseBets\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lose\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedMultiOnWinCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Multiplier\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22advancedMultiOnWin\x22\x20value=\x222\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22advancedMultiOnWinBets\x22\x20value=\x221\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20win\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedMultiOnLoseCheck\x22\x20checked/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Multiplier\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22advancedMultiOnLose\x22\x20value=\x222\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20id=\x22advancedMultiOnLoseBets\x22\x20value=\x221\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lose\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedBetHighOnBetCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Switch\x20bethigh\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedBetHighOnBet\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bet\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedBetHighOnWinCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Switch\x20bethigh\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedBetHighOnWin\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20win\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedBetHighOnLoseCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Switch\x20bethigh\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedBetHighOnLose\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lose\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedBetHighOnProfitCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Switch\x20bethigh\x20on\x20profit\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20type=\x22number\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20value=\x220.00000010\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id=\x22advancedBetHighOnProfit\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\x22wdb--input\x20wdb-w-40\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22resetstatsOnProfitCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Reset\x20stats\x20on\x20profit\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20type=\x22number\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20value=\x220.00000010\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id=\x22resetstatsOnProfit\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class=\x22wdb--input\x20wdb-w-40\x22\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedStopRollNumberCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x20roll\x20number\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x2249.5\x22\x20id=\x22advancedStopRollNumber\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedStopAfterStreakCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x20current\x20streak\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x22-2\x22\x20id=\x22advancedStopAfterStreak\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedStopOnBetsCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x2210\x22\x20id=\x22advancedStopOnBets\x22\x20/>\x20bet\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedStopOnWinsCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedStopOnWins\x22\x20/>\x20win\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22advancedStopOnLoseCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x221\x22\x20id=\x22advancedStopOnLose\x22\x20/>\x20lose\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22stopOnProfitCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x20profit\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x220.00000010\x22\x20id=\x22stopOnProfit\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22wdb-advanced-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20id=\x22stopOnBalanceCheck\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Stop\x20on\x20balance\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x220.00000010\x22\x20id=\x22stopOnBalance\x22\x20/>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapLog\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<code\x20id=\x22wdbLog\x22></code>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapVariables\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<pre>chance\x20:\x20%\x20win\x20chance\x20in\x20next\x20game\x0aplinkoRow\x20:\x20Plinko\x20rows,\x20only\x20for\x20plinko\x20game,\x20some\x20site\x20not\x20have\x0aplinkoRisk\x20:\x20risk\x20level\x20for\x20plinko\x20game\x20(low,\x20medium,\x20high)\x0abethigh\x20:\x20Bet\x20side\x20in\x20next\x20game\x20(true\x20is\x20over/above,\x20false\x20is\x20under/below)\x0anextbet\x20:\x20Amount\x20in\x20next\x20game\x0alastBet.amount,\x20previousbet\x20:\x20Amount\x20in\x20previous\x20game\x0alastBet.chance\x20:\x20%\x20win\x20chance\x20in\x20previous\x20game\x0alastBet.roll\x20:\x20%\x20roll\x20chance\x20in\x20previous\x20game\x0alastBet.target\x20:\x20Target\x20number\x20in\x20previous\x20game\x20(some\x20sites\x20have)\x0alastBet.result\x20:\x20Result\x20number\x20in\x20previous\x20game\x20(some\x20sites\x20have)\x0alastBet.profit,\x20currentprofit\x20:\x20Profit\x20in\x20previous\x20game\x0alastBet.nonce\x20:\x20Current\x20seed\x20nonce\x0alastBet.id\x20:\x20Bet\x20ID\x20in\x20previous\x20game\x0acurrency\x20:\x20Currency\x20to\x20play\x20(some\x20site\x20not\x20work)\x0abalance\x20:\x20Current\x20balance\x0aminbalance\x20:\x20Smallest\x20balance\x20in\x20session\x0amaxbalance\x20:\x20Biggest\x20balance\x20in\x20session\x0aminprofit\x20:\x20Smallest\x20profit\x20in\x20session\x0amaxprofit\x20:\x20Biggest\x20profit\x20in\x20session\x0aprofit\x20:\x20Session\x20profit\x0awagered\x20:\x20Session\x20wagered\x0awin\x20:\x20State\x20in\x20previous\x20game\x20(true\x20is\x20win,\x20false\x20is\x20lose)\x0abets\x20:\x20Bet\x20count\x0awins\x20:\x20Win\x20count\x0awinstreak\x20\x20:\x20Winning\x20streak\x0alosses\x20:\x20Lose\x20count\x0alosestreak\x20:\x20Losing\x20streak\x0acurrentstreak\x20:\x20Current\x20streak\x20(smaller\x200\x20is\x20losing\x20streak\x20and\x20vice\x20versa)\x0apartialprofit\x20:\x20Partial\x20profit\x20(same\x20in\x20other\x20dicebot)\x0ascriptname\x20:\x20Name\x20of\x20script\x20u\x20use\x0acasino\x20:\x20Name\x20of\x20casino\x20(example:\x20500.casino\x20=\x20500;\x20bch.games\x20=\x20bch)</pre>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapFunctions\x22>\x0a<pre>dobet()\x20:\x20Main\x20function\x20for\x20betting\x0astop()\x20:\x20Stop\x20betting\x0aresume()\x20:\x20Resume\x20betting\x20with\x20current\x20params\x0aresetseed()\x20:\x20Reset\x20fairness\x0aresetstats()\x20:\x20Reset\x20statistics\x0aresetchart()\x20:\x20Reset\x20chart\x0aresethistory()\x20:\x20Reset\x20history\x0aresetlog()\x20:\x20Reset\x20log\x0aresetall()\x20:\x20Reset\x20time,\x20statistics,\x20chart,\x20history,\x20log\x0acheckbalance()\x20:\x20Check\x20actual\x20balance\x0aching()\x20:\x20Alert\x20with\x20sound\x0alog(message)\x20:\x20Write\x20a\x20message\x20in\x20Log\x20area\x0asleep(sec)\x20:\x20Pause\x20betting\x20system\x20with\x20sec\x0aresetpartialprofit()\x20:\x20Reset\x20partialprofit</pre>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbWrapTips\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<pre>Click\x20▼\x20or\x20▲\x20on\x20to\x20see\x20something\x20change\x0aDisable\x20chart,\x20history,\x20log\x20to\x20have\x20best\x20performance\x0aHold\x20top\x20or\x20bottom\x20area\x20to\x20move\x20the\x20bot\x20around</pre>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22wdbControlMenu\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22wdbStartButton\x22\x20class=\x22btn-grad\x20btn-control\x22\x20onclick=\x22start(\x27click\x27)\x22>Start</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22wdbStopButton\x22\x20class=\x22btn-grad\x20btn-control\x22\x20onclick=\x22stop()\x22>Stop</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22wdbResumeButton\x22\x20class=\x22btn-grad\x20btn-control\x22\x20onclick=\x22resume(\x27click\x27)\x22\x20disabled>Resume</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22wdbStopOnWinButton\x22\x20class=\x22btn-grad\x20btn-control\x22\x20onclick=\x22stopOnWin()\x22>Stop\x20On\x20Win</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-grad\x20btn-control\x22\x20onclick=\x22checkbalance()\x22>Check\x20Balance</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a\x0a\x20\x20<div\x20id=\x22wdbFooter\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22float-left\x22\x20style=\x22padding-left:\x205px;\x22>\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20Trial\x20version\x20|\x20','wdbMenuMode','result','random','/lib/easytimer.js','95vh','function\x20resetstats()\x0ajs.global:resetstats()\x0aend','variables','wdbCurrentStreak','wdbWagered','function\x20checkbalance()\x0a\x20js.global:checkbalance()\x0a\x20end','theme','dobet()','advancedStopOnLoseCheck','roll','getTimeValues','wdbScriptBoxLUA','chart','advancedMultiOnWinCheck',';path=/','Script\x20Name:\x20','createObjectURL',',\x0a\x20\x20\x20\x20\x20\x20Amount=','wdbWrapHistory','wdbWrapTips','charAt','DiceScript','sort','#wdbHistory',',\x0a\x20\x20\x20\x20\x20\x20Nonce=','5QWsmuT','nonce','stopchart','\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22float-right\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Speed:\x20<span\x20id=\x22wdbSpeed\x22>0</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22wdb-toggle\x22\x20id=\x22wdbToggleHideControlBot\x22\x20onclick=\x22toggleHideControlBot(this)\x22>▲</span>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20</div>\x0a</div>','map','#wdbWrapVariables\x20pre','function\x20start()\x0ajs.global:start()\x0aend','&rolls-number=0&roll=','innerText','low','wdbStats','advancedMultiOnLoseCheck','\x0a\x20\x20\x20\x20bethigh=','left','resetlog',',\x0a\x20\x20\x20\x20\x20\x20id=\x22','change','Profit','handleAdvanced\x20ok','background-color','hours','appendChild','380px','download','width','wdbLog','checked','advancedBetHighOnProfit','not\x20','function\x20resetpartialprofit()\x0ajs.global:resetpartialprofit()\x0aend','wdbWrapVariables','green','removeProperty','start','wdbOpenLUAScript','wdb','wdbWrapControl','Stop\x20on\x20current\x20streak\x20','\x0a\x20\x20\x20\x20bets=','#91f190','profit','resetstatsOnProfit','substring','startlog','plinko','return\x20bethigh','wdbFooter','#wdbWrapHistory\x20table\x20thead\x20tr\x20th','href',',\x0a\x20\x20\x20\x20\x20\x20chance=\x20','save','height','block','resetall','advancedStopRollNumberCheck','toFixed','prepend','advancedBaseBet','message','showstats','cookie','562pCkzgZ','resethistory','advancedChanceOnWinCheck','advancedStopAfterStreak','stopOnProfit','#400000','advancedMultiOnLoseBets','onmouseup','now','return\x20currency','wdbToggleLiveHistory','https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js','addEventListener','<style>\x0a::-webkit-scrollbar\x20{\x0a\x20\x20width:\x208px;\x0a\x20\x20height:\x208px;\x0a}\x0a\x0a::-webkit-scrollbar-track\x20{\x0a\x20\x20background:\x20#f1f1f1;\x0a}\x0a\x0a::-webkit-scrollbar-thumb\x20{\x0a\x20\x20background:\x20#888;\x0a}\x0a\x0a::-webkit-scrollbar-thumb:hover\x20{\x0a\x20\x20background:\x20#555;\x0a}\x0a\x0a#wdb\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20width:\x201000px;\x0a\x20\x20font-family:\x20\x22Courier\x20New\x22,\x20monospace;\x0a\x20\x20font-size:\x2011px!important;\x0a\x20\x20text-align:\x20left;\x0a\x20\x20background:\x20#bef6fa;\x0a\x20\x20color:\x20#000;\x0a\x20\x20line-height:\x201.5!important;\x0a\x20\x20top:\x205px;\x0a\x20\x20left:\x205px;\x0a\x20\x20padding:\x205px;\x0a\x20\x20position:\x20absolute;\x0a\x20\x20z-index:\x202147483002;\x0a\x20\x20border:\x201px\x20solid\x20#ccc;\x0a\x20\x20border-radius:\x203px;\x0a}\x0a\x0a#wdbHeader,\x0a#wdbFooter\x20{\x0a\x20\x20cursor:\x20move;\x0a}\x0a\x0a.wdb-toggle\x20{\x0a\x20\x20cursor:\x20pointer;\x0a\x20\x20padding:\x205px;\x0a\x20\x20z-index:\x202147483003;\x0a}\x0a\x0a#wdbMenu\x20{\x0a\x20\x20padding:\x203px;\x0a}\x0a\x0a#wdbMenu\x20select,\x0a#wdbMenu\x20span\x20input[type=number]\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20background:\x20#bef6fa!important;\x0a\x20\x20padding:\x203px\x205px;\x0a\x20\x20border:\x201px\x20solid\x20#ccc!important;\x0a\x20\x20border-radius:\x200!important;\x0a\x20\x20border-radius:\x203px!important;\x0a}\x0a\x0a#wdbMenu\x20span\x20input[type=number]\x20{\x0a\x20\x20width:\x2086px;\x0a}\x0a\x0a#wdbMenu\x20select:focus\x20{\x0a\x20\x20color:\x20black!important;\x0a}\x0a\x0a.switch\x20{\x0a\x20\x20position:\x20relative;\x0a\x20\x20display:\x20inline-block;\x0a\x20\x20width:\x2045px;\x0a\x20\x20height:\x2019px;\x0a}\x0a\x0a.switch\x20input\x20{\x20\x0a\x20\x20opacity:\x200;\x0a\x20\x20width:\x200;\x0a\x20\x20height:\x200;\x0a}\x0a\x0a.slider\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20background:\x20#ccc;\x0a\x20\x20position:\x20absolute;\x0a\x20\x20cursor:\x20pointer;\x0a\x20\x20top:\x200;\x0a\x20\x20left:\x200;\x0a\x20\x20right:\x200;\x0a\x20\x20bottom:\x200;\x0a\x20\x20border-radius:\x203px;\x0a\x20\x20-webkit-transition:\x20.4s;\x0a\x20\x20transition:\x20.4s;\x0a}\x0a\x0a.slider:before\x20{\x0a\x20\x20content:\x20\x22\x22;\x0a\x20\x20position:\x20absolute;\x0a\x20\x20background:\x20white;\x0a\x20\x20height:\x2013px;\x0a\x20\x20width:\x2013px;\x0a\x20\x20left:\x203px;\x0a\x20\x20bottom:\x203.5px;\x0a\x20\x20border-radius:\x203px;\x0a\x20\x20-webkit-transition:\x20.3s;\x0a\x20\x20transition:\x20.3s;\x0a}\x0a\x0ainput:checked\x20+\x20.slider\x20{\x0a\x20\x20background:\x20linear-gradient(to\x20right,\x20#7ec5fb,\x20#4e98e0,\x20#276bc3,\x20#143ea0,\x20#180a78);;\x0a}\x0a\x0ainput:focus\x20+\x20.slider\x20{\x0a\x20\x20box-shadow:\x200\x200\x201px\x20#ffc107;\x0a}\x0a\x0ainput:checked\x20+\x20.slider:before\x20{\x0a\x20\x20-webkit-transform:\x20translateX(26px);\x0a\x20\x20-ms-transform:\x20translateX(26px);\x0a\x20\x20transform:\x20translateX(26px);\x0a}\x0a\x0a.btn-grad\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20cursor:\x20pointer;\x0a\x20\x20background-image:\x20linear-gradient(to\x20right,\x20#7788f4,\x20#6779f0,\x20#5769ec,\x20#465ae7,\x20#334ae1);\x0a\x20\x20text-align:\x20center;\x0a\x20\x20transition:\x200.5s;\x0a\x20\x20padding:\x203px;\x0a\x20\x20background-size:\x20200%\x20auto;\x0a\x20\x20border:\x20#ffc107;\x0a\x20\x20border-radius:\x203px;\x0a}\x0a\x0a.btn-grad:hover\x20{\x0a\x20\x20background-position:\x20right\x20center;\x0a\x20\x20text-decoration:\x20none;\x0a}\x0a\x0a.btn-grad:active\x20{\x0a\x20\x20opacity:\x20.65;\x0a}\x0a\x0a.btn-grad:disabled\x20{\x0a\x20\x20cursor:\x20auto;\x0a\x20\x20opacity:\x20.65;\x0a\x20\x20color:\x20#bef6fa;\x0a}\x0a\x0a#wdbOpenLUAScript,\x0a#wdbOpenJSScript\x20{\x0a\x20\x20all:\x20revert;\x0a}\x0a\x0a#wdbChart,\x0a#wdbWrapHistory\x20{\x0a\x20\x20height:\x20190px;\x0a\x20\x20padding:\x203px;\x0a}\x0a\x0a#wdbWrapHistory\x20{\x0a\x20\x20overflow-x:\x20auto;\x0a}\x0a\x0a#wdbWrapHistory\x20table\x20{\x0a\x20\x20border-collapse:\x20collapse;\x0a}\x0a\x0a#wdbWrapHistory\x20table\x20thead\x20tr\x20th\x20{\x0a\x20\x20font-weight:\x20normal;\x0a\x20\x20text-align:\x20left;\x0a\x20\x20padding:\x201px;\x0a\x20\x20border:\x201px\x20solid\x20#ccc;\x0a\x20\x20white-space:\x20nowrap;\x0a\x20\x20color:\x20#000;\x0a}\x0a\x0a#wdbHistory\x20tr\x20{\x0a\x20\x20border-bottom:\x201px\x20solid\x20#bef6fa;\x0a\x20\x20color:\x20#000!important;\x0a}\x0a\x0a#wdbHistory\x20tr:last-child\x20{\x0a\x20\x20border-bottom:\x201px\x20solid\x20#ccc;\x0a}\x0a\x0a#wdbHistory\x20tr\x20td\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20white-space:\x20nowrap;\x0a\x20\x20padding:\x201.5px;\x0a\x20\x20border-right:\x201px\x20solid\x20#bef6fa;\x0a\x20\x20border-left:\x201px\x20solid\x20#bef6fa;\x0a}\x0a\x0a#wdbHistory\x20tr\x20td:first-child\x20{\x0a\x20\x20border-left:\x201px\x20solid\x20#ccc;\x0a}\x0a\x0a#wdbHistory\x20tr\x20td:last-child\x20{\x0a\x20\x20border-right:\x201px\x20solid\x20#ccc;\x0a}\x0a\x0a#wdbHistory\x20tr\x20td\x20input\x20{\x0a\x20\x20all:\x20revert;\x0a}\x0a\x0a#wdbAdvancedMode,\x0a#wdbWrapLog,\x0a#wdbWrapVariables,\x0a#wdbWrapFunctions,\x0a#wdbWrapTips\x20{\x0a\x20\x20overflow:\x20scroll;\x0a\x20\x20height:\x20300px;\x0a}\x0a\x0a#wdbWrapVariables\x20pre,\x0a#wdbWrapFunctions\x20pre,\x0a#wdbWrapTips\x20pre\x20{\x0a\x20\x20all:\x20revert;\x0a\x20\x20background:\x20#bef6fa;\x0a\x20\x20color:\x20#000;\x0a\x20\x20margin:\x200;\x0a}\x0a\x0a#wdbWrapLog\x20code\x20{\x0a\x20\x20all:\x20revert;\x0a}\x0a\x0a#wdbLog\x20li\x20{\x0a\x20\x20list-style:\x20none;\x0a\x20\x20padding-left:\x200;\x0a}\x0a\x0a#wdbOpenScript\x20{\x0a\x20\x20all:\x20revert;\x0a}\x0a\x0a.wdb-stats,\x0a.wdb-flex-container\x20{\x0a\x20\x20display:\x20flex;\x0a\x20\x20align-items:\x20stretch;\x0a}\x0a\x0a.wdb-stats\x20div\x20{\x0a\x20\x20flex-grow:\x201;\x0a\x20\x20padding:\x202px\x2032px;\x0a}\x0a\x0a.wdb-stats\x20div\x20li\x20{\x0a\x20\x20list-style:\x20none;\x0a}\x0a\x0a.wdb-advanced-item\x20{\x0a\x20\x20line-height:\x202;\x0a\x20\x20padding:\x203px\x200;\x0a\x20\x20border-bottom:\x201px\x20solid\x20#e7e7e7;\x0a}\x0a\x0a.wdb-advanced-item:last-child\x20{\x0a\x20\x20border:\x20none;\x0a}\x0a\x0a.wdb-advanced-item\x20input\x20{\x0a\x20\x20all:\x20revert;\x0a}\x0a\x0a.wdb-advanced-item\x20input[type=number]\x20{\x0a\x20\x20width:\x2086px;\x0a}\x0a\x0a.clearfix::after\x20{\x0a\x20\x20content:\x20\x22\x22;\x0a\x20\x20clear:\x20both;\x0a\x20\x20display:\x20table;\x0a}\x0a\x0a.float-left\x20{\x0a\x20\x20float:\x20left!important;\x0a}\x0a\x0a.float-right\x20{\x0a\x20\x20float:\x20right!important;\x0a}\x0a\x0a.wdb-menu2\x20{\x0a\x20\x20display:\x20flex;\x0a}\x0a\x0a.wdb-menu2\x20span\x20{\x0a\x20\x20padding:\x203.5px;\x0a\x20\x20text-align:\x20center;\x0a}\x0a\x0a#wdbTabMenu,\x0a#wdbControlMenu\x20{\x0a\x20\x20display:\x20flex;\x20flex-wrap:\x20wrap;\x0a\x20\x20margin-top:\x203px;\x0a}\x0a\x0a#wdbTabMenu\x20button,\x0a#wdbControlMenu\x20button\x20{\x0a\x20\x20flex-basis:\x200;\x0a\x20\x20flex-grow:\x201;\x0a\x20\x20margin:\x203px;\x0a}\x0a\x0a.CodeMirror\x20{\x0a\x20\x20height:\x20269px;\x0a}\x0a</style>\x0a\x0a<div\x20id=\x22wdb\x22>\x0a\x20\x20<div\x20id=\x22wdbHeader\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22clearfix\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22float-left\x22\x20style=\x22padding-left:\x205px;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20Free\x20Dice-Bot\x20|\x20','updateHistory\x20ok','1235738PgDrqP','hidechart','data-currency','style','history','expires=','advancedMultiOnLose','abcdefghijklmnopqrstuvwxyz',',\x0a\x20\x20\x20\x20\x20\x20nonce=','0123456789abcdefghijklmnopqrstuvwxyz','high','querySelectorAll','toLowerCase','2330508JkajPz','&stop-profit=0.00000000&stop-loss=0.00000000&moreOptionsSelectWin=streak&number-win=2&moreOptionsSelectLose=streak&number-lose=2&speed=50&betting=250','currency=\x22','dice','wdbResumeButton','wdbMaxBalance','defaults','return\x20plinkoRisk','showchart','getElementById','function\x20stop()\x0ajs.global:stop()\x0aend','wdbMain','options','wdbHighLose','wdbTime','hidehistory','#000','EPSILON','wdbLUAMode','\x20at\x20','\x0a\x20\x20\x20\x20maxbalance=','seconds','hidestats','scriptName','\x0a\x20\x20','response','wdbToggleShowChart','line','flex','fixed','load','stoplog','function\x20resume()\x0ajs.global:resume()\x0aend','#wdbOpenScript',',\x0a\x20\x20\x20\x20\x20\x20Roll=','stop','\x0a\x20\x20\x20\x20minprofit=','wdbWrap','toUTCString','forEach','#wdbSaveScriptButton','wdbJSMode','return\x20chance','getAttribute','split','text','\x20win','advancedStopOnWins','indexOf','3559684fpXYip',',\x0a\x20\x20\x20\x20\x20\x20roll=','advancedChanceOnWin','removeChild','starthistory','pause','advancedStopOnLose','\x0a\x20\x20\x20\x20previousbet=','\x0a\x20\x20\x20\x20currentstreak=','advancedChance','wdbWrapMode','\x0a\x20\x20\x20\x20winstreak=','table.getn\x20=\x20function\x20(t)\x0a\x20\x20\x20\x20local\x20count\x20=\x200\x0a\x20\x20\x20\x20for\x20_,\x20__\x20in\x20pairs(t)\x20do\x0a\x20\x20\x20\x20\x20\x20count\x20=\x20count\x20+\x201\x0a\x20\x20\x20\x20end\x0a\x20\x20\x20\x20return\x20count\x0a\x20\x20end','Bearer\x20','function\x20resetseed()\x0ajs.global:resetseed()\x0aend',',\x0a\x20\x20\x20\x20\x20\x20Chance=\x20','Amount','advancedStopOnWinsCheck','wdbMaxRows','top','13707gJGLNf','stats','javascript','target','none','advancedBetHighOnBet','$1=$1/$2\x20','\x0a\x20\x20\x20\x20win=','function\x20resethistory()\x0ajs.global:resethistory()\x0aend','advancedChanceOnLoseCheck','backgroundColor','wdbShowMode','content','\x22,\x0a\x20\x20\x20\x20\x20\x20Id=\x22','.lua','</td>','wdbStartButton','wdbRunningScript','0123456789','wdbHeader',',\x0a\x20\x20\x20\x20\x20\x20target=\x20','replace','advancedMultiOnWin','&currency=','functions','files','wdbProfit','#wdbWrapTips\x20pre','<option\x20value=\x22','disabled','text/plain;\x20charset=utf-8','NaN','length','/change-currency','Stop\x20on\x20profit\x20','wdbOpenJSScript','headers','wdbMinBalance','stophistory','wdbLosses','createElement','minbalance=','advancedBetHighOnProfitCheck','render','value','preventDefault','children','clientX','black','%\x20chance\x20to\x20win,\x20','wdbHighBet','$1=$1*$2\x20','Result','\x0a\x20\x20\x20\x20balance=','#wdbWrapFunctions\x20pre','fromTextArea','\x20|\x20','wdbHistory','wdbToggleLiveChart','0:0:0:0','wdbBets','wdbBalance','wdbMaxProfit','return\x20plinkoRow','light','hostname','wdbWrapLicenseBox','default','#advancedBetHigh','/api/game/dice','wdbWrapPercentProfit','stopOnBalance','toUpperCase','clear','innerHTML','styleSheets','darcula','\x0a\x20\x20\x20\x20profit=','meta[name=\x22csrf-token\x22]','5px','resetstats','\x0a\x20\x20\x20\x20maxprofit=','div','4772673xhKsjw','https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/darcula.min.css','display','amount','\x0a\x20\x20\x20\x20currentprofit=','show','.js','wdbPercentProfit','secondsUpdated','2943535hpcdvz','color','\x20lose','showhistory','click','advancedStopOnBets','/lib/fengari.js','wdbShowFunctions','querySelector','\x22\x0a\x20\x20\x20\x20}\x0a\x20\x20','\x22\x20type=\x22checkbox\x22\x20checked\x20/>','onmousemove','\x0a\x20\x20\x20\x20wins=','position','wdbAdvancedMode','#ffc0cb','insertBefore','wdbWrapFunctions','data','wdbShowLog','Call\x20resume()\x20by\x20script\x20->\x20betting\x20after\x205s','event','#bef6fa','getValue','advancedBetHighOnLoseCheck','Stop\x20on\x20roll\x20number\x20','return\x20nextbet','push','wdbToggleShowHistory','white','return\x20scriptname','resetchart','balance=','round','then','wdbLoader\x20ok','floor','190px','getTime','post','.currency-items\x20>\x20div','33hsmqiv','wdbChart','wdbHighLoseStreak','head','Stop\x20on\x20balance\x20','\x20bet','wdbShowTips',',\x0a\x20\x20\x20\x20\x20\x20profit=','slice','Infinity','onmousedown','advancedChanceOnLoseBets','\x22\x20type=\x22checkbox\x22\x20/>','startchart','reset','shift','remove',',\x0a\x20\x20\x20\x20\x20\x20result=','wdbToggleLiveLog','setOption','wdbHighWinStreak','status','lastChild','advancedChanceOnLose','Stop\x20on\x20','casino=\x22','\x0a\x20\x20\x20\x20nextbet=','advancedStopAfterStreakCheck','wdbWrapInitializing','</td>\x0a\x20\x20\x20\x20\x20\x20<td>','red','wdbWrapLog','log','function\x20invest(amount)\x0ajs.global:invest(amount)\x0aend','4409890xPPyfO','chance','hide','$1=$1+$2\x20','/lib/ms.js','advancedBetHighOnWin','updateChart\x20ok','Connected','wdbMenuCoin','Betting\x20'];_0x5d91=function(){return _0x2a3929;};return _0x5d91();}async function sendBet(){const _0x154c95=_0x391689;try{chance=Math['round']((chance+Number['EPSILON'])*0x64)/0x64,target=bethigh?99.99-chance:chance;const _0x344087=Math[_0x154c95(0x1cd)]((0x63/chance+Number[_0x154c95(0x295)])*0x64)/0x64,_0x53128c={'authorization':_0x154c95(0x2c2)+token},_0x144c2='type=%3E&condition=%3'+(bethigh?'E':'C')+_0x154c95(0x2e0)+coin+'&auto=false&autoMore=false&actionOnWin=reset&actionOnLose=reset&amount='+nextbet[_0x154c95(0x262)](0x8)+_0x154c95(0x232)+target['toFixed'](0x2)+'&payout='+_0x344087['toFixed'](0x4)+'&chance='+chance['toFixed'](0x2)+_0x154c95(0x285),{data:_0x266cfb}=await axios[_0x154c95(0x1d3)](_0x154c95(0x195),_0x144c2,{'headers':_0x53128c});return!_0x266cfb['status']?(stop(),log(_0x266cfb[_0x154c95(0x265)])):handleResult(_0x266cfb['result']);}catch(_0x5042c7){if(run)return sendBet();}}async function handleResult(_0x4c25c9){const _0x19b4ee=_0x391689;try{return currentprofit=_0x4c25c9[_0x19b4ee(0x253)],lastBet[_0x19b4ee(0x21b)]=_0x4c25c9['result'],result=_0x4c25c9[_0x19b4ee(0x20f)],lastBet['id']=String(_0x4c25c9['id']),handleStats();}catch(_0x101b08){return stop(),log(getErrMsg(_0x101b08));}}async function getNewToken(){const _0x932c94=_0x391689;try{const {data:_0x26c64e}=await axios['post'](_0x932c94(0x207));token=_0x26c64e[_0x932c94(0x209)];}catch(_0x4e8aff){return stop(),log(getErrMsg(_0x4e8aff));}}
+darkMode = false;
+mode = "lua";
+game = "dice";
+run = false;
+win = false;
+sOW = false;
+startBalance = 0x0;
+percentWagered = 0x0;
+percentProfit = 0x0;
+luaEditor = null;
+jsEditor = null;
+stopHistory = false;
+stopLog = false;
+stopChart = false;
+maxRows = 0xc8;
+chart = null;
+betsChart = 0x0;
+profitChart = 0x0;
+dps = [];
+coins = [];
+coin = null;
+currency = null;
+casino = null;
+balance = 0x0;
+minbalance = 0x0;
+maxbalance = 0x0;
+minprofit = 0x0;
+maxprofit = 0x0;
+basebet = 0x0;
+nextbet = 0x0;
+chance = 0x0;
+havePlinkoRows = false;
+plinkoRow = 0x8;
+plinkoRisk = "low";
+bethigh = true;
+target = 0x0;
+result = 0x0;
+bets = 0x0;
+wins = 0x0;
+losses = 0x0;
+profit = 0x0;
+wagered = 0x0;
+maxBetAmount = 0x0;
+maxLosseAmount = 0x0;
+currentprofit = 0x0;
+partialprofit = 0x0;
+winstreak = 0x0;
+losestreak = 0x0;
+currentstreak = 0x0;
+maxwinstreak = 0x0;
+maxlosestreak = 0x0;
+previousbet = 0x0;
+lastBet = {
+    'amount': 0x0,
+    'Amount': 0x0,
+    'chance': 0x0,
+    'Chance': 0x0,
+    'roll': 0x0,
+    'Roll': 0x0,
+    'profit': 0x0,
+    'Profit': 0x0,
+    'target': 0x0,
+    'Target': 0x0,
+    'result': 0x0,
+    'Result': 0x0,
+    'nonce': 0x0,
+    'Nonce': 0x0,
+    'id': '',
+    'Id': ''
+};
+scriptname = '';
+decimalAmountView = 0x8;
+decimalChanceView = 0x2;
+decimalTargetResult = 0x2;
+wdbSpeed = null;
+wdbTimer = null;
+wdbSound = new Object(new Audio(WDB_API + '/' + WDB_MODE + '/media/ching.mp3'));
+wdbUI = "<style>\n::-webkit-scrollbar {\n  width: 8px;\n  height: 8px;\n}\n\n::-webkit-scrollbar-track {\n  background: #f1f1f1;\n}\n\n::-webkit-scrollbar-thumb {\n  background: #888;\n}\n\n::-webkit-scrollbar-thumb:hover {\n  background: #555;\n}\n\n#wdb {\n  all: revert;\n  width: 1000px;\n  font-family: \"Courier New\", monospace;\n  font-size: 11px!important;\n  text-align: left;\n  background: #bef6fa;\n  color: #000;\n  line-height: 1.5!important;\n  top: 5px;\n  left: 5px;\n  padding: 5px;\n  position: absolute;\n  z-index: 2147483002;\n  border: 1px solid #ccc;\n  border-radius: 3px;\n}\n\n#wdbHeader,\n#wdbFooter {\n  cursor: move;\n}\n\n.wdb-toggle {\n  cursor: pointer;\n  padding: 5px;\n  z-index: 2147483003;\n}\n\n#wdbMenu {\n  padding: 3px;\n}\n\n#wdbMenu select,\n#wdbMenu span input[type=number] {\n  all: revert;\n  background: #bef6fa!important;\n  padding: 3px 5px;\n  border: 1px solid #ccc!important;\n  border-radius: 0!important;\n  border-radius: 3px!important;\n}\n\n#wdbMenu span input[type=number] {\n  width: 86px;\n}\n\n#wdbMenu select:focus {\n  color: black!important;\n}\n\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 45px;\n  height: 19px;\n}\n\n.switch input { \n  opacity: 0;\n  width: 0;\n  height: 0;\n}\n\n.slider {\n  all: revert;\n  background: #ccc;\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  border-radius: 3px;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider:before {\n  content: \"\";\n  position: absolute;\n  background: white;\n  height: 13px;\n  width: 13px;\n  left: 3px;\n  bottom: 3.5px;\n  border-radius: 3px;\n  -webkit-transition: .3s;\n  transition: .3s;\n}\n\ninput:checked + .slider {\n  background: linear-gradient(to right, #7ec5fb, #4e98e0, #276bc3, #143ea0, #180a78);;\n}\n\ninput:focus + .slider {\n  box-shadow: 0 0 1px #ffc107;\n}\n\ninput:checked + .slider:before {\n  -webkit-transform: translateX(26px);\n  -ms-transform: translateX(26px);\n  transform: translateX(26px);\n}\n\n.btn-grad {\n  all: revert;\n  cursor: pointer;\n  background-image: linear-gradient(to right, #7788f4, #6779f0, #5769ec, #465ae7, #334ae1);\n  text-align: center;\n  transition: 0.5s;\n  padding: 3px;\n  background-size: 200% auto;\n  border: #ffc107;\n  border-radius: 3px;\n}\n\n.btn-grad:hover {\n  background-position: right center;\n  text-decoration: none;\n}\n\n.btn-grad:active {\n  opacity: .65;\n}\n\n.btn-grad:disabled {\n  cursor: auto;\n  opacity: .65;\n  color: #bef6fa;\n}\n\n#wdbOpenLUAScript,\n#wdbOpenJSScript {\n  all: revert;\n}\n\n#wdbChart,\n#wdbWrapHistory {\n  height: 190px;\n  padding: 3px;\n}\n\n#wdbWrapHistory {\n  overflow-x: auto;\n}\n\n#wdbWrapHistory table {\n  border-collapse: collapse;\n}\n\n#wdbWrapHistory table thead tr th {\n  font-weight: normal;\n  text-align: left;\n  padding: 1px;\n  border: 1px solid #ccc;\n  white-space: nowrap;\n  color: #000;\n}\n\n#wdbHistory tr {\n  border-bottom: 1px solid #bef6fa;\n  color: #000!important;\n}\n\n#wdbHistory tr:last-child {\n  border-bottom: 1px solid #ccc;\n}\n\n#wdbHistory tr td {\n  all: revert;\n  white-space: nowrap;\n  padding: 1.5px;\n  border-right: 1px solid #bef6fa;\n  border-left: 1px solid #bef6fa;\n}\n\n#wdbHistory tr td:first-child {\n  border-left: 1px solid #ccc;\n}\n\n#wdbHistory tr td:last-child {\n  border-right: 1px solid #ccc;\n}\n\n#wdbHistory tr td input {\n  all: revert;\n}\n\n#wdbAdvancedMode,\n#wdbWrapLog,\n#wdbWrapVariables,\n#wdbWrapFunctions,\n#wdbWrapTips {\n  overflow: scroll;\n  height: 300px;\n}\n\n#wdbWrapVariables pre,\n#wdbWrapFunctions pre,\n#wdbWrapTips pre {\n  all: revert;\n  background: #bef6fa;\n  color: #000;\n  margin: 0;\n}\n\n#wdbWrapLog code {\n  all: revert;\n}\n\n#wdbLog li {\n  list-style: none;\n  padding-left: 0;\n}\n\n#wdbOpenScript {\n  all: revert;\n}\n\n.wdb-stats,\n.wdb-flex-container {\n  display: flex;\n  align-items: stretch;\n}\n\n.wdb-stats div {\n  flex-grow: 1;\n  padding: 2px 32px;\n}\n\n.wdb-stats div li {\n  list-style: none;\n}\n\n.wdb-advanced-item {\n  line-height: 2;\n  padding: 3px 0;\n  border-bottom: 1px solid #e7e7e7;\n}\n\n.wdb-advanced-item:last-child {\n  border: none;\n}\n\n.wdb-advanced-item input {\n  all: revert;\n}\n\n.wdb-advanced-item input[type=number] {\n  width: 86px;\n}\n\n.clearfix::after {\n  content: \"\";\n  clear: both;\n  display: table;\n}\n\n.float-left {\n  float: left!important;\n}\n\n.float-right {\n  float: right!important;\n}\n\n.wdb-menu2 {\n  display: flex;\n}\n\n.wdb-menu2 span {\n  padding: 3.5px;\n  text-align: center;\n}\n\n#wdbTabMenu,\n#wdbControlMenu {\n  display: flex; flex-wrap: wrap;\n  margin-top: 3px;\n}\n\n#wdbTabMenu button,\n#wdbControlMenu button {\n  flex-basis: 0;\n  flex-grow: 1;\n  margin: 3px;\n}\n\n.CodeMirror {\n  height: 269px;\n}\n</style>\n\n<div id=\"wdb\">\n  <div id=\"wdbHeader\">\n    <div class=\"clearfix\">\n      <div class=\"float-left\" style=\"padding-left: 5px;\">\n       Free Dice-Bot | " + CASINO_GAME + " | " + WDB_MODE + "\n      </div>\n      <div class=\"float-right\">\n        <span class=\"wdb-toggle\" id=\"wdbToggleMinimal\" onclick=\"toggleMinimalBot(this)\">\u25BC</span>\n      </div>\n    </div>\n  </div>\n\n  <div id=\"wdbMain\">\n    <div id=\"wdbMenu\">\n      <select id=\"wdbMenuMode\" class=\"wdb-select\" onchange='toggleMode(this.value)'>\n        <option value=\"lua\">LUA Mode</option>\n        <option value=\"js\">JS Mode</option>\n        <option value=\"advanced\">Advanced Mode</option>\n      </select>\n      <select id=\"wdbMenuCoin\" class=\"wdb-select\" onchange='changeCoin()'>\n        <option>Loading...</option>\n      </select>\n      <span>\n        Max Record\n        <input type=\"number\" id=\"wdbMaxRows\" value=\"200\" onchange=\"changeMaxRows()\" />\n      </span>\n      <span id=\"scriptName\"></span>\n    </div>\n\n    <div class=\"wdb-menu2\">\n      <span>\n        Theme<br />\n        <label class=\"switch\">\n          <input type=\"checkbox\" onchange=\"toggleDarkMode()\">\n          <span class=\"slider\"></span>\n        </label>\n      </span>\n\n      <span>\n        Show Stats<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleShowStats\" type=\"checkbox\" onchange=\"toggleShow('stats')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n\n      <span>\n        Show Chart<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleShowChart\" type=\"checkbox\" onchange=\"toggleShow('chart')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n\n      <span>\n        Show History<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleShowHistory\" type=\"checkbox\" onchange=\"toggleShow('history')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n      \n      <span>\n        Live Chart<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleLiveChart\" type=\"checkbox\" onchange=\"toggleLive('chart')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n\n      <span>\n        Live History<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleLiveHistory\" type=\"checkbox\" onchange=\"toggleLive('history')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n\n      <span>\n        Live Log<br />\n        <label class=\"switch\">\n        <input id=\"wdbToggleLiveLog\" type=\"checkbox\" onchange=\"toggleLive('log')\" checked=\"\">\n        <span class=\"slider\"></span>\n        </label>\n      </span>\n      \n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resetstats')\">Reset Stats</button>\n      </span>\n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resetchart')\">Reset Chart</button>\n      </span>\n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resethistory')\">Reset History</button>\n      </span>\n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resetlog')\">Reset Log</button>\n      </span>\n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resetseed')\">Reset Seed</button>\n      </span>\n      <span style=\"padding-top: 19px;\">\n        <button class=\"btn-grad\" onclick=\"selectFunction('resetall')\">Reset All</button>\n      </span>\n    </div>\n\n    <div class=\"wdb-stats\" id=\"wdbStats\">\n      <div>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Time:</span>\n          <span class=\"float-right\"><span id=\"wdbTime\">0:0:0:0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Balance:</span>\n          <span class=\"float-right\"><span id=\"wdbBalance\">0.00000000</span></span>\n        </li>\n        \n        <li class=\"clearfix\">\n          <span class=\"float-left\">Min Balance:</span>\n          <span class=\"float-right\"><span id=\"wdbMinBalance\">0.00000000</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Balance:</span>\n          <span class=\"float-right\"><span id=\"wdbMaxBalance\">0.00000000</span></span>\n        </li>\n      </div>\n      \n      <div>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Wagered:</span>\n          <span class=\"float-right\">(<span id=\"wdbPercentWagered\">0.00</span>x) <span id=\"wdbWagered\">0.00000000</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Profit:</span>\n          <span class=\"float-right\" id=\"wdbWrapPercentProfit\">(<span id=\"wdbPercentProfit\">0.00</span>%) <span id=\"wdbProfit\">0.00000000</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Min Profit:</span>\n          <span class=\"float-right\"><span id=\"wdbMinProfit\">0.00000000</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Profit:</span>\n          <span class=\"float-right\"><span id=\"wdbMaxProfit\">0.00000000</span></span>\n        </li>\n      </div>\n\n      <div>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Bets:</span>\n          <span class=\"float-right\"><span id=\"wdbBets\">0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Losses:</span>\n          <span class=\"float-right\"><span id=\"wdbLosses\">0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Bet:</span>\n          <span class=\"float-right\"><span id=\"wdbHighBet\">0.00000000</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Lose:</span>\n          <span class=\"float-right\"><span id=\"wdbHighLose\">0.00000000</span></span>\n        </li>\n      </div>\n\n      <div>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Wins:</span>\n          <span class=\"float-right\"><span id=\"wdbWins\">0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Current Streak:</span>\n          <span class=\"float-right\"><span id=\"wdbCurrentStreak\">0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Win Streak:</span>\n          <span class=\"float-right\"><span id=\"wdbHighWinStreak\">0</span></span>\n        </li>\n        <li class=\"clearfix\">\n          <span class=\"float-left\">Max Lose Streak:</span>\n          <span class=\"float-right\"><span id=\"wdbHighLoseStreak\">0</span></span>\n        </li>\n      </div>\n    </div>\n\n    <div class=\"wdb-flex-container\" id=\"wdbWrapControl\">\n      <div style=\"flex-grow: 1; width: 50%;\">\n        <div id=\"wdbChart\"></div>\n\n        <div id=\"wdbWrapHistory\">\n          <table>\n            <thead>\n              <tr>\n                <th>Bets</th>\n                <th>Amount</th>\n                <th>High</th>\n                <th>Target Chance</th>\n                <th>Roll Chance</th>\n                <th>Profit</th>\n                <th>Target Number</th>\n                <th>Roll Number</th>\n                <th>Nonce</th>\n                <th>Bet ID</th>\n              </tr>\n            </thead>\n            <tbody id=\"wdbHistory\"></tbody>\n          </table>\n        </div>\n      </div>\n\n      <div style=\"flex-grow: 1; width: 50%; padding-left: 5px;\">\n        <div id=\"wdbTabMenu\">\n          <button class=\"btn-grad\" id=\"wdbShowMode\" onclick=\"toggleNav('mode')\">Mode</button>\n          <button class=\"btn-grad\" id=\"wdbShowLog\" onclick=\"toggleNav('log')\">Log</button>\n          <button class=\"btn-grad\" id=\"wdbShowVariables\" onclick=\"toggleNav('variables')\">Variables</button>\n          <button class=\"btn-grad\" id=\"wdbShowFunctions\" onclick=\"toggleNav('functions')\">Functions</button>\n          <button class=\"btn-grad\" id=\"wdbShowTips\" onclick=\"toggleNav('tips')\">Tips</button>\n        </div>\n\n        <div>\n          <div id=\"wdbWrapMode\">\n            <div id=\"wdbLUAMode\">\n              <div style=\"padding: 5px 2px 5px\">\n                <button class=\"btn-grad\" id=\"wdbSaveScriptButton\" onclick=\"saveScript()\">Save</button>\n                <input style=\"margin: 0 3px;\" type=\"file\" id=\"wdbOpenLUAScript\" accept=\".txt, .lua\" />\n              </div>\n              <textarea id=\"wdbScriptBoxLUA\">-- Trial version ( until serverdown or no-donation ) \n-- Donation \n-- Doge / Trx =  PM on tele / WA \n-- Continues project at least > 10$ / month any donation \n-- DONATION = 0 $ \n scriptname='Free Dice-Bot LUA script'\nchance=49.5\nbethigh=true\nbasebet=0.00000001\nnextbet=basebet\n\nfunction dobet()\n  if (win) then\n    nextbet=basebet\n  else\n    nextbet=previousbet*2\n  end\nend</textarea>\n            </div>\n\n            <div id=\"wdbJSMode\">\n              <div style=\"padding: 5px 2px 5px\">\n                <button class=\"btn-grad\" id=\"wdbSaveScriptButton\" onclick=\"saveScript()\">Save</button>\n                <input style=\"margin: 0 3px;\" type=\"file\" id=\"wdbOpenJSScript\" accept=\".txt, .js\" />\n              </div>\n              <textarea id=\"wdbScriptBoxJS\">scriptname='example JS script'\nchance=49.5\nbethigh=true\nbasebet=0.00000001\nnextbet=basebet\n// currency='trx'\n// log(casino)\n// plinkoRow=8 // depend dice site, only for plinko game\n// plinkoRisk='low' // low, medium, high; only for plinko game\n\nasync function dobet() {\n  // log('profit: ' + profit)\n  // await sleep(0.2)\n  if (win) {\n    nextbet=basebet\n  } else {\n    nextbet=previousbet*2\n  }\n}</textarea>\n            </div>\n\n            <div id=\"wdbAdvancedMode\" class=\"wdb-advanced\">\n              <div class=\"wdb-advanced-item\">\n                Chance <input type=\"number\" id=\"advancedChance\" value=\"49.5\" />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                Base bet\n                <input type=\"number\" id=\"advancedBaseBet\" value=\"0.00000001\" />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                Bethigh\n                <input type=\"checkbox\" id=\"advancedBetHigh\" checked />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedChanceOnWinCheck\" />\n                Set chance to\n                <input type=\"number\" value=\"45.5\" id=\"advancedChanceOnWin\" />\n                on\n                <input type=\"number\" value=\"1\" id=\"advancedChanceOnWinBets\" />\n                win\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedChanceOnLoseCheck\" />\n                Set chance to\n                <input type=\"number\" value=\"50.5\" id=\"advancedChanceOnLose\" />\n                on\n                <input type=\"number\" value=\"1\" id=\"advancedChanceOnLoseBets\" />\n                lose\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedMultiOnWinCheck\" />\n                Multiplier\n                <input type=\"number\" id=\"advancedMultiOnWin\" value=\"2\" />\n                on\n                <input type=\"number\" id=\"advancedMultiOnWinBets\" value=\"1\" />\n                win\n              </div>\n              \n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedMultiOnLoseCheck\" checked/>\n                Multiplier\n                <input type=\"number\" id=\"advancedMultiOnLose\" value=\"2\" />\n                on\n                <input type=\"number\" id=\"advancedMultiOnLoseBets\" value=\"1\" />\n                lose\n              </div>\n              \n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedBetHighOnBetCheck\" />\n                Switch bethigh on\n                <input type=\"number\" value=\"1\" id=\"advancedBetHighOnBet\" />\n                bet\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedBetHighOnWinCheck\" />\n                Switch bethigh on\n                <input type=\"number\" value=\"1\" id=\"advancedBetHighOnWin\" />\n                win\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedBetHighOnLoseCheck\" />\n                Switch bethigh on\n                <input type=\"number\" value=\"1\" id=\"advancedBetHighOnLose\" />\n                lose\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedBetHighOnProfitCheck\" />\n                Switch bethigh on profit\n                <input\n                  type=\"number\"\n                  value=\"0.00000010\"\n                  id=\"advancedBetHighOnProfit\"\n                  class=\"wdb--input wdb-w-40\"\n                />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"resetstatsOnProfitCheck\" />\n                Reset stats on profit\n                <input\n                  type=\"number\"\n                  value=\"0.00000010\"\n                  id=\"resetstatsOnProfit\"\n                  class=\"wdb--input wdb-w-40\"\n                />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedStopRollNumberCheck\" />\n                Stop on roll number\n                <input type=\"number\" value=\"49.5\" id=\"advancedStopRollNumber\" />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedStopAfterStreakCheck\" />\n                Stop on current streak\n                <input type=\"number\" value=\"-2\" id=\"advancedStopAfterStreak\" />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedStopOnBetsCheck\" />\n                Stop on\n                <input type=\"number\" value=\"10\" id=\"advancedStopOnBets\" /> bet\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedStopOnWinsCheck\" />\n                Stop on\n                <input type=\"number\" value=\"1\" id=\"advancedStopOnWins\" /> win\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"advancedStopOnLoseCheck\" />\n                Stop on\n                <input type=\"number\" value=\"1\" id=\"advancedStopOnLose\" /> lose\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"stopOnProfitCheck\" />\n                Stop on profit\n                <input type=\"number\" value=\"0.00000010\" id=\"stopOnProfit\" />\n              </div>\n\n              <div class=\"wdb-advanced-item\">\n                <input type=\"checkbox\" id=\"stopOnBalanceCheck\" />\n                Stop on balance\n                <input type=\"number\" value=\"0.00000010\" id=\"stopOnBalance\" />\n              </div>\n            </div>\n          </div>\n\n          <div id=\"wdbWrapLog\">\n            <code id=\"wdbLog\"></code>\n          </div>\n\n          <div id=\"wdbWrapVariables\">\n            <pre>chance : % win chance in next game\nplinkoRow : Plinko rows, only for plinko game, some site not have\nplinkoRisk : risk level for plinko game (low, medium, high)\nbethigh : Bet side in next game (true is over/above, false is under/below)\nnextbet : Amount in next game\nlastBet.amount, previousbet : Amount in previous game\nlastBet.chance : % win chance in previous game\nlastBet.roll : % roll chance in previous game\nlastBet.target : Target number in previous game (some sites have)\nlastBet.result : Result number in previous game (some sites have)\nlastBet.profit, currentprofit : Profit in previous game\nlastBet.nonce : Current seed nonce\nlastBet.id : Bet ID in previous game\ncurrency : Currency to play (some site not work)\nbalance : Current balance\nminbalance : Smallest balance in session\nmaxbalance : Biggest balance in session\nminprofit : Smallest profit in session\nmaxprofit : Biggest profit in session\nprofit : Session profit\nwagered : Session wagered\nwin : State in previous game (true is win, false is lose)\nbets : Bet count\nwins : Win count\nwinstreak  : Winning streak\nlosses : Lose count\nlosestreak : Losing streak\ncurrentstreak : Current streak (smaller 0 is losing streak and vice versa)\npartialprofit : Partial profit (same in other dicebot)\nscriptname : Name of script u use\ncasino : Name of casino (example: 500.casino = 500; bch.games = bch)</pre>\n          </div>\n\n          <div id=\"wdbWrapFunctions\">\n<pre>dobet() : Main function for betting\nstop() : Stop betting\nresume() : Resume betting with current params\nresetseed() : Reset fairness\nresetstats() : Reset statistics\nresetchart() : Reset chart\nresethistory() : Reset history\nresetlog() : Reset log\nresetall() : Reset time, statistics, chart, history, log\ncheckbalance() : Check actual balance\nching() : Alert with sound\nlog(message) : Write a message in Log area\nsleep(sec) : Pause betting system with sec\nresetpartialprofit() : Reset partialprofit</pre>\n          </div>\n\n          <div id=\"wdbWrapTips\">\n            <pre>Click \u25BC or \u25B2 on to see something change\nDisable chart, history, log to have best performance\nHold top or bottom area to move the bot around</pre>\n          </div>\n        </div>\n\n        <div id=\"wdbControlMenu\">\n          <button id=\"wdbStartButton\" class=\"btn-grad btn-control\" onclick=\"start('click')\">Start</button>\n          <button id=\"wdbStopButton\" class=\"btn-grad btn-control\" onclick=\"stop()\">Stop</button>\n          <button id=\"wdbResumeButton\" class=\"btn-grad btn-control\" onclick=\"resume('click')\" disabled>Resume</button>\n          <button id=\"wdbStopOnWinButton\" class=\"btn-grad btn-control\" onclick=\"stopOnWin()\">Stop On Win</button>\n          <button class=\"btn-grad btn-control\" onclick=\"checkbalance()\">Check Balance</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div id=\"wdbFooter\">\n    <div class=\"clearfix\">\n      <div class=\"float-left\" style=\"padding-left: 5px;\"> \n        Trial version | " + location.hostname.replace('www.', '') + "\n      </div>\n      <div class=\"float-right\">\n        Speed: <span id=\"wdbSpeed\">0</span>\n        <span class=\"wdb-toggle\" id=\"wdbToggleHideControlBot\" onclick=\"toggleHideControlBot(this)\">\u25B2</span>\n      </div>\n    </div>\n  </div>\n</div>";
+function changeMaxRows() {
+    maxRows = Number(document.getElementById('wdbMaxRows').value);
+    toggleChart("reset");
+    toggleHistory("clear");
+    toggleLog("clear");
+}
+function toggleDarkMode() {
+    darkMode = !darkMode;
+    if (darkMode) {
+        document.getElementById("wdb").style.backgroundColor = '#400000';
+        document.getElementById("wdb").style.color = "#bef6fa";
+        chart.options.theme = "dark1";
+        chart.render();
+        luaEditor.setOption('theme', "darcula");
+        jsEditor.setOption('theme', 'darcula');
+        document.querySelector("#wdbWrapVariables pre").style.backgroundColor = '#400000';
+        document.querySelector("#wdbWrapVariables pre").style.color = "#bef6fa";
+        document.querySelector("#wdbWrapFunctions pre").style.backgroundColor = "#400000";
+        document.querySelector("#wdbWrapFunctions pre").style.color = '#bef6fa';
+        document.querySelector("#wdbWrapTips pre").style.backgroundColor = '#400000';
+        document.querySelector("#wdbWrapTips pre").style.color = "#bef6fa";
+        document.querySelectorAll("#wdbWrapHistory table thead tr th").forEach(_0x4514b9 => _0x4514b9.style.color = '#bef6fa');
+    } else {
+        document.getElementById("wdb").style.backgroundColor = "#bef6fa";
+        document.getElementById("wdb").style.color = "#000";
+        chart.options.theme = 'light';
+        chart.render();
+        luaEditor.setOption('theme', "default");
+        jsEditor.setOption('theme', "default");
+        document.querySelector("#wdbWrapVariables pre").style.backgroundColor = "#bef6fa";
+        document.querySelector("#wdbWrapVariables pre").style.color = "#000";
+        document.querySelector("#wdbWrapFunctions pre").style.backgroundColor = "#bef6fa";
+        document.querySelector("#wdbWrapFunctions pre").style.color = "#000";
+        document.querySelector("#wdbWrapTips pre").style.backgroundColor = "#bef6fa";
+        document.querySelector("#wdbWrapTips pre").style.color = "#000";
+        document.querySelectorAll("#wdbWrapHistory table thead tr th").forEach(_0x7003ca => _0x7003ca.style.color = "#000");
+    }
+    updateStats();
+}
+function toggleMinimalBot(_0x8ca9c1) {
+    if (_0x8ca9c1.innerText === '▼') {
+        document.getElementById('wdbMain').style.display = 'none';
+        document.getElementById("wdbFooter").style.display = 'none';
+        document.getElementById("wdb").style.width = "350px";
+        document.getElementById("wdb").style.top = "95vh";
+        document.getElementById("wdb").style.left = "0vh";
+        document.getElementById("wdb").style.position = 'fixed';
+        _0x8ca9c1.innerText = '▲';
+    } else {
+        document.getElementById('wdbMain').style.display = 'block';
+        document.getElementById("wdbFooter").style.display = "block";
+        document.getElementById("wdb").style.width = '1000px';
+        document.getElementById("wdb").style.top = "5px";
+        document.getElementById("wdb").style.left = "5px";
+        _0x8ca9c1.innerText = '▼';
+    }
+}
+function toggleHideControlBot(_0x55c5ba) {
+    if (_0x55c5ba.innerText === '▲') {
+        document.getElementById('wdbWrapControl').style.display = 'none';
+        _0x55c5ba.innerText = '▼';
+    } else {
+        document.getElementById('wdbWrapControl').style.display = "flex";
+        _0x55c5ba.innerText = '▲';
+    }
+}
+function drawSelectCoin() {
+    let _0x16202e = '';
+    coins.map(_0x1b2b98 => {
+        _0x16202e += "<option value=\"" + _0x1b2b98 + "\">" + _0x1b2b98 + "</option>";
+    });
+    document.getElementById("wdbMenuCoin").innerHTML = _0x16202e;
+    currency = String(coin).toLowerCase();
+    fengari.load("currency=\"" + currency + "\"")();
+}
+async function wdbCreateUI() {
+    const _0x18e942 = document.createElement("div");
+    _0x18e942.id = "wdbWrap";
+    _0x18e942.innerHTML = wdbUI;
+    document.body.prepend(_0x18e942);
+    const _0x48d218 = document.getElementById('wdb');
+    let _0x375873 = 0x0;
+    let _0x13350d = 0x0;
+    let _0x5dd70e = 0x0;
+    let _0x19a1cd = 0x0;
+    if (document.getElementById("wdbHeader")) {
+        document.getElementById("wdbHeader").onmousedown = _0x911aa6;
+    } else {
+        _0x48d218.onmousedown = _0x911aa6;
+    }
+    if (document.getElementById("wdbFooter")) {
+        document.getElementById("wdbFooter").onmousedown = _0x911aa6;
+    } else {
+        _0x48d218.onmousedown = _0x911aa6;
+    }
+    function _0x911aa6(_0x186f8d) {
+        _0x186f8d = _0x186f8d || window.event;
+        _0x186f8d.preventDefault();
+        _0x5dd70e = _0x186f8d.clientX;
+        _0x19a1cd = _0x186f8d.clientY;
+        document.onmouseup = _0x30766f;
+        document.onmousemove = _0x3c9046;
+    }
+    function _0x3c9046(_0x357faa) {
+        _0x357faa = _0x357faa || window.event;
+        _0x357faa.preventDefault();
+        _0x375873 = _0x5dd70e - _0x357faa.clientX;
+        _0x13350d = _0x19a1cd - _0x357faa.clientY;
+        _0x5dd70e = _0x357faa.clientX;
+        _0x19a1cd = _0x357faa.clientY;
+        _0x48d218.style.top = _0x48d218.offsetTop - _0x13350d + 'px';
+        _0x48d218.style.left = _0x48d218.offsetLeft - _0x375873 + 'px';
+    }
+    function _0x30766f() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+    }
+    if (document.getElementById("wdbWrapLicenseBox")) {
+        document.getElementById("wdbWrapLicenseBox").remove();
+    }
+    if (document.getElementById("wdbWrapInitializing")) {
+        document.getElementById("wdbWrapInitializing").remove();
+    }
+    luaEditor = CodeMirror.fromTextArea(document.getElementById('wdbScriptBoxLUA'), {
+        'theme': 'default',
+        'mode': "lua",
+        'lineNumbers': true
+    });
+    luaEditor.save();
+    jsEditor = CodeMirror.fromTextArea(document.getElementById("wdbScriptBoxJS"), {
+        'theme': 'default',
+        'mode': "javascript",
+        'lineNumbers': true
+    });
+    jsEditor.save();
+    wdbSpeed = new MySpeed();
+    wdbTimer = new easytimer.Timer();
+    wdbTimer.addEventListener("secondsUpdated", () => {
+        const _0x32ef57 = wdbTimer.getTimeValues().days + ':' + wdbTimer.getTimeValues().hours + ':' + wdbTimer.getTimeValues().minutes + ':' + wdbTimer.getTimeValues().seconds;
+        document.getElementById("wdbTime").innerText = _0x32ef57;
+    });
+    document.getElementById("wdbJSMode").style.display = "none";
+    document.getElementById('wdbAdvancedMode').style.display = 'none';
+    document.getElementById("wdbWrapLog").style.display = 'none';
+    document.getElementById("wdbWrapVariables").style.display = 'none';
+    document.getElementById('wdbWrapFunctions').style.display = 'none';
+    document.getElementById('wdbWrapTips').style.display = 'none';
+    document.getElementById("wdbShowMode").disabled = true;
+    luaFileSelector = document.getElementById("wdbOpenLUAScript");
+    luaFileSelector.addEventListener("click", function () {
+        luaFileSelector.value = null;
+    });
+    luaFileSelector.addEventListener("change", async _0x3b2ccb => {
+        const _0x8fa22e = await new Response(_0x3b2ccb.target.files[0x0]).text();
+        if (!_0x8fa22e) {
+            return;
+        }
+        luaEditor.setValue(_0x8fa22e);
+    });
+    jsFileSelector = document.getElementById('wdbOpenJSScript');
+    jsFileSelector.addEventListener("click", function () {
+        jsFileSelector.value = null;
+    });
+    jsFileSelector.addEventListener("change", async _0xfabf46 => {
+        const _0x2e2508 = await new Response(_0xfabf46.target.files[0x0]).text();
+        if (!_0x2e2508) {
+            return;
+        }
+        jsEditor.setValue(_0x2e2508);
+    });
+    drawChart();
+}
+async function wdbLoader(_0x2c3fa8, _0x4d67db) {
+    await _0x2c3fa8('https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js');
+    await _0x4d67db("https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css");
+    await _0x4d67db('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/darcula.min.css');
+    await _0x2c3fa8("https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js");
+    await _0x2c3fa8("https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/lua/lua.min.js");
+    await _0x2c3fa8('https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.min.js');
+    await _0x2c3fa8(WDB_API + '/' + WDB_MODE + "/lib/chart.js");
+    await _0x2c3fa8(WDB_API + '/' + WDB_MODE + "/lib/easytimer.js");
+    await _0x2c3fa8(WDB_API + '/' + WDB_MODE + "/lib/fengari.js");
+    await _0x2c3fa8(WDB_API + '/' + WDB_MODE + "/lib/ms.js");
+    await beforeWork(_0x2c3fa8);
+    await wdbCreateUI();
+    await getListCoin();
+    initLua();
+    log('Connected');
+    return "wdbLoader ok";
+}
+function toggleNav(_0x3f9451) {
+    if (_0x3f9451 === "mode") {
+        document.getElementById("wdbWrapMode").style.display = "block";
+        document.getElementById("wdbWrapLog").style.display = "none";
+        document.getElementById('wdbWrapVariables').style.display = "none";
+        document.getElementById("wdbWrapFunctions").style.display = "none";
+        document.getElementById("wdbWrapTips").style.display = "none";
+        document.getElementById("wdbShowMode").disabled = true;
+        document.getElementById("wdbShowLog").disabled = false;
+        document.getElementById("wdbShowVariables").disabled = false;
+        document.getElementById("wdbShowFunctions").disabled = false;
+        document.getElementById("wdbShowTips").disabled = false;
+    } else {
+        if (_0x3f9451 === "log") {
+            document.getElementById("wdbWrapMode").style.display = "none";
+            document.getElementById("wdbWrapLog").style.display = "block";
+            document.getElementById('wdbWrapVariables').style.display = "none";
+            document.getElementById("wdbWrapFunctions").style.display = "none";
+            document.getElementById("wdbWrapTips").style.display = "none";
+            document.getElementById('wdbShowMode').disabled = false;
+            document.getElementById("wdbShowLog").disabled = true;
+            document.getElementById("wdbShowVariables").disabled = false;
+            document.getElementById("wdbShowFunctions").disabled = false;
+            document.getElementById("wdbShowTips").disabled = false;
+        } else {
+            if (_0x3f9451 === "variables") {
+                document.getElementById("wdbWrapMode").style.display = 'none';
+                document.getElementById("wdbWrapLog").style.display = "none";
+                document.getElementById('wdbWrapVariables').style.display = "block";
+                document.getElementById("wdbWrapFunctions").style.display = "none";
+                document.getElementById("wdbWrapTips").style.display = "none";
+                document.getElementById("wdbShowMode").disabled = false;
+                document.getElementById("wdbShowLog").disabled = false;
+                document.getElementById("wdbShowVariables").disabled = true;
+                document.getElementById('wdbShowFunctions').disabled = false;
+                document.getElementById("wdbShowTips").disabled = false;
+            } else {
+                if (_0x3f9451 === "functions") {
+                    document.getElementById('wdbWrapMode').style.display = "none";
+                    document.getElementById("wdbWrapLog").style.display = "none";
+                    document.getElementById('wdbWrapVariables').style.display = "none";
+                    document.getElementById("wdbWrapFunctions").style.display = "block";
+                    document.getElementById("wdbWrapTips").style.display = "none";
+                    document.getElementById("wdbShowMode").disabled = false;
+                    document.getElementById("wdbShowLog").disabled = false;
+                    document.getElementById("wdbShowVariables").disabled = false;
+                    document.getElementById("wdbShowFunctions").disabled = true;
+                    document.getElementById("wdbShowTips").disabled = false;
+                } else if (_0x3f9451 === "tips") {
+                    document.getElementById("wdbWrapMode").style.display = "none";
+                    document.getElementById("wdbWrapLog").style.display = "none";
+                    document.getElementById('wdbWrapVariables').style.display = 'none';
+                    document.getElementById("wdbWrapFunctions").style.display = "none";
+                    document.getElementById("wdbWrapTips").style.display = "block";
+                    document.getElementById("wdbShowMode").disabled = false;
+                    document.getElementById("wdbShowLog").disabled = false;
+                    document.getElementById("wdbShowVariables").disabled = false;
+                    document.getElementById("wdbShowFunctions").disabled = false;
+                    document.getElementById("wdbShowTips").disabled = true;
+                }
+            }
+        }
+    }
+}
+function toggleShow(_0x484f75) {
+    if (_0x484f75 === 'stats') {
+        if (document.getElementById("wdbToggleShowStats").checked) {
+            selectFunction('showstats');
+        } else {
+            selectFunction("hidestats");
+        }
+    } else {
+        if (_0x484f75 === "chart") {
+            if (document.getElementById('wdbToggleShowChart').checked) {
+                selectFunction("showchart");
+            } else {
+                selectFunction('hidechart');
+            }
+        } else if (_0x484f75 === "history") {
+            if (document.getElementById("wdbToggleShowHistory").checked) {
+                selectFunction("showhistory");
+            } else {
+                selectFunction("hidehistory");
+            }
+        }
+    }
+}
+function toggleLive(_0x489158) {
+    if (_0x489158 === "chart") {
+        if (document.getElementById('wdbToggleLiveChart').checked) {
+            selectFunction("startchart");
+        } else {
+            selectFunction('stopchart');
+        }
+    } else {
+        if (_0x489158 === 'history') {
+            if (document.getElementById('wdbToggleLiveHistory').checked) {
+                selectFunction("starthistory");
+            } else {
+                selectFunction('stophistory');
+            }
+        } else if (_0x489158 === "log") {
+            if (document.getElementById('wdbToggleLiveLog').checked) {
+                selectFunction("startlog");
+            } else {
+                selectFunction('stoplog');
+            }
+        }
+    }
+}
+function selectFunction(_0x5a8141) {
+    if (_0x5a8141 === "resetall") {
+        resetall();
+    }
+    if (_0x5a8141 === "resetstats") {
+        resetstats();
+    }
+    if (_0x5a8141 === 'resetchart') {
+        toggleChart("reset");
+    }
+    if (_0x5a8141 === "resethistory") {
+        toggleHistory("clear");
+    }
+    if (_0x5a8141 === "resetlog") {
+        toggleLog("clear");
+    }
+    if (_0x5a8141 === 'resetseed') {
+        resetseed();
+    }
+    if (_0x5a8141 === "stopchart") {
+        toggleChart("stop");
+    }
+    if (_0x5a8141 === "startchart") {
+        toggleChart("start");
+    }
+    if (_0x5a8141 === "stophistory") {
+        toggleHistory("stop");
+    }
+    if (_0x5a8141 === "starthistory") {
+        toggleHistory("start");
+    }
+    if (_0x5a8141 === 'stoplog') {
+        toggleLog("stop");
+    }
+    if (_0x5a8141 === "startlog") {
+        toggleLog("start");
+    }
+    if (_0x5a8141 === "hidestats") {
+        toggleStats("hide");
+    }
+    if (_0x5a8141 === "showstats") {
+        toggleStats('show');
+    }
+    if (_0x5a8141 === "hidechart") {
+        toggleChart("hide");
+    }
+    if (_0x5a8141 === "showchart") {
+        toggleChart("show");
+    }
+    if (_0x5a8141 === "hidehistory") {
+        toggleHistory("hide");
+    }
+    if (_0x5a8141 === "showhistory") {
+        toggleHistory('show');
+    }
+}
+function toggleMode(_0x342ed8) {
+    mode = _0x342ed8;
+    if (_0x342ed8 === "lua") {
+        document.getElementById('wdbLUAMode').style.display = "block";
+        document.getElementById("wdbJSMode").style.display = "none";
+        document.getElementById("wdbAdvancedMode").style.display = "none";
+    } else {
+        if (_0x342ed8 === 'js') {
+            document.getElementById('wdbLUAMode').style.display = "none";
+            document.getElementById('wdbJSMode').style.display = "block";
+            document.getElementById("wdbAdvancedMode").style.display = "none";
+        } else if (_0x342ed8 === 'advanced') {
+            document.getElementById('wdbLUAMode').style.display = "none";
+            document.getElementById('wdbJSMode').style.display = 'none';
+            document.getElementById("wdbAdvancedMode").style.display = 'block';
+        }
+    }
+}
+function toggleStats(_0x436d59) {
+    if (_0x436d59 === 'hide') {
+        document.getElementById("wdbStats").style.display = "none";
+    } else if (_0x436d59 === "show") {
+        document.getElementById("wdbStats").style.display = "flex";
+    }
+}
+function toggleChart(_0x51aa1e) {
+    if (_0x51aa1e === "hide") {
+        document.getElementById('wdbChart').style.display = 'none';
+        document.getElementById("wdbWrapHistory").style.height = '380px';
+    } else {
+        if (_0x51aa1e === 'show') {
+            document.getElementById('wdbChart').style.display = 'block';
+            document.getElementById("wdbWrapHistory").style.height = "190px";
+        } else {
+            if (_0x51aa1e === "stop") {
+                stopChart = true;
+            } else {
+                if (_0x51aa1e === "start") {
+                    stopChart = false;
+                } else if (_0x51aa1e === "reset") {
+                    betsChart = 0x0;
+                    profitChart = 0x0;
+                    drawChart();
+                }
+            }
+        }
+    }
+}
+function toggleHistory(_0x45aafb) {
+    if (_0x45aafb === "hide") {
+        document.getElementById("wdbWrapHistory").style.display = 'none';
+        document.getElementById("wdbChart").style.height = '380px';
+    } else {
+        if (_0x45aafb === 'show') {
+            document.getElementById("wdbWrapHistory").style.display = "block";
+            document.getElementById("wdbChart").style.height = '190px';
+        } else {
+            if (_0x45aafb === 'stop') {
+                stopHistory = true;
+            } else {
+                if (_0x45aafb === "start") {
+                    stopHistory = false;
+                } else if (_0x45aafb === "clear") {
+                    document.getElementById("wdbHistory").innerHTML = '';
+                }
+            }
+        }
+    }
+}
+function toggleLog(_0x2f16f8) {
+    if (_0x2f16f8 === "stop") {
+        stopLog = true;
+    } else {
+        if (_0x2f16f8 === "start") {
+            stopLog = false;
+        } else if (_0x2f16f8 === "clear") {
+            document.getElementById("wdbLog").innerHTML = '';
+        }
+    }
+}
+async function handleAdvanced() {
+    chance = Number(document.getElementById('advancedChance').value);
+    chanceOnWinCheck = document.getElementById("advancedChanceOnWinCheck").checked;
+    if (chanceOnWinCheck) {
+        chanceOnWin = Number(document.getElementById("advancedChanceOnWin").value);
+    } else {
+        chanceOnWin = chance;
+    }
+    chanceOnWinBets = Number(document.getElementById("advancedChanceOnWinBets").value);
+    chanceOnLoseCheck = document.getElementById("advancedChanceOnLoseCheck").checked;
+    if (chanceOnLoseCheck) {
+        chanceOnLose = Number(document.getElementById('advancedChanceOnLose').value);
+    } else {
+        chanceOnLose = chance;
+    }
+    chanceOnLoseBets = Number(document.getElementById("advancedChanceOnLoseBets").value);
+    multiOnWinCheck = document.getElementById("advancedMultiOnWinCheck").checked;
+    if (multiOnWinCheck) {
+        multiOnWin = Number(document.getElementById("advancedMultiOnWin").value);
+    } else {
+        multiOnWin = 0x1;
+    }
+    multiOnWinBets = Number(document.getElementById('advancedMultiOnWinBets').value);
+    multiOnLoseCheck = document.getElementById('advancedMultiOnLoseCheck').checked;
+    if (multiOnLoseCheck) {
+        multiOnLose = Number(document.getElementById("advancedMultiOnLose").value);
+    } else {
+        multiOnLose = 0x1;
+    }
+    multiOnLoseBets = Number(document.getElementById('advancedMultiOnLoseBets').value);
+    betHighOnBetCheck = document.getElementById("advancedBetHighOnBetCheck").checked;
+    if (betHighOnBetCheck) {
+        betHighOnBet = Number(document.getElementById('advancedBetHighOnBet').value);
+        if (bets % betHighOnBet === 0x0) {
+            bethigh = !bethigh;
+        }
+    }
+    betHighOnProfitCheck = document.getElementById("advancedBetHighOnProfitCheck").checked;
+    if (betHighOnProfitCheck) {
+        betHighOnProfit = Number(document.getElementById("advancedBetHighOnProfit").value);
+        if (profit >= betHighOnProfit) {
+            bethigh = !bethigh;
+        }
+    }
+    resetstatsOnProfitCheck = document.getElementById("resetstatsOnProfitCheck").checked;
+    if (resetstatsOnProfitCheck) {
+        resetstatsOnProfit = Number(document.getElementById('resetstatsOnProfit').value);
+        if (profit >= resetstatsOnProfit) {
+            resetstats();
+        }
+    }
+    stopRollNumberCheck = document.getElementById("advancedStopRollNumberCheck").checked;
+    if (stopRollNumberCheck) {
+        stopRollNumber = Number(document.getElementById("advancedStopRollNumber").value);
+        if (lastBet.result === stopRollNumber) {
+            stop();
+            log("Stop on roll number " + stopRollNumber);
+        }
+    }
+    stopStreakCheck = document.getElementById("advancedStopAfterStreakCheck").checked;
+    if (stopStreakCheck) {
+        stopStreak = Number(document.getElementById('advancedStopAfterStreak').value);
+        if (stopStreak > 0x0) {
+            if (currentstreak >= stopStreak) {
+                stop();
+                log("Stop on current streak " + stopStreak);
+            }
+        } else {
+            if (currentstreak <= stopStreak) {
+                stop();
+                log("Stop on current streak " + stopStreak);
+            }
+        }
+    }
+    stopOnBetsCheck = document.getElementById('advancedStopOnBetsCheck').checked;
+    if (stopOnBetsCheck) {
+        stopOnBets = Number(document.getElementById("advancedStopOnBets").value);
+        if (bets >= stopOnBets) {
+            stop();
+            log("Stop on " + stopOnBets + " bet");
+        }
+    }
+    stopOnWinsCheck = document.getElementById('advancedStopOnWinsCheck').checked;
+    if (stopOnWinsCheck) {
+        stopOnWins = Number(document.getElementById("advancedStopOnWins").value);
+        if (winstreak >= stopOnWins) {
+            stop();
+            log("Stop on " + stopOnWins + " win");
+        }
+    }
+    stopOnLoseCheck = document.getElementById('advancedStopOnLoseCheck').checked;
+    if (stopOnLoseCheck) {
+        stopOnLose = Number(document.getElementById("advancedStopOnLose").value);
+        if (losestreak >= stopOnLose) {
+            stop();
+            log("Stop on " + stopOnLose + " lose");
+        }
+    }
+    stopOnProfitCheck = document.getElementById("stopOnProfitCheck").checked;
+    if (stopOnProfitCheck) {
+        stopOnProfit = Number(document.getElementById("stopOnProfit").value);
+        if (profit >= stopOnProfit) {
+            stop();
+            log("Stop on profit " + stopOnProfit);
+        }
+    }
+    stopOnBalanceCheck = document.getElementById("stopOnBalanceCheck").checked;
+    if (stopOnBalanceCheck) {
+        stopOnBalance = Number(document.getElementById("stopOnBalance").value);
+        if (balance >= stopOnBalance) {
+            stop();
+            log("Stop on balance " + stopOnBalance);
+        }
+    }
+    if (win) {
+        betHighOnWinCheck = document.getElementById("advancedBetHighOnWinCheck").checked;
+        if (betHighOnWinCheck) {
+            betHighOnWin = Number(document.getElementById('advancedBetHighOnWin').value);
+            if (winstreak % betHighOnWin === 0x0) {
+                bethigh = !bethigh;
+            }
+        }
+        if (winstreak % chanceOnWinBets === 0x0) {
+            chance = chanceOnWin;
+        }
+        if (multiOnWinCheck) {
+            if (winstreak % multiOnWinBets === 0x0) {
+                nextbet = previousbet * multiOnWin;
+            }
+        } else {
+            nextbet = basebet;
+        }
+    } else {
+        betHighOnLoseCheck = document.getElementById("advancedBetHighOnLoseCheck").checked;
+        if (betHighOnLoseCheck) {
+            betHighOnLose = Number(document.getElementById("advancedBetHighOnLose").value);
+            if (losestreak % betHighOnLose === 0x0) {
+                bethigh = !bethigh;
+            }
+        }
+        if (losestreak % chanceOnLoseBets === 0x0) {
+            chance = chanceOnLose;
+        }
+        if (multiOnLoseCheck) {
+            if (losestreak % multiOnLoseBets === 0x0) {
+                nextbet = previousbet * multiOnLose;
+            }
+        } else {
+            nextbet = basebet;
+        }
+    }
+    return "handleAdvanced ok";
+}
+function changeCoin() {
+    coin = document.getElementById('wdbMenuCoin').value;
+    currency = String(coin).toLowerCase();
+    fengari.load("currency=\"" + currency + "\"")();
+    checkbalance();
+}
+async function handleStats() {
+    bets++;
+    betsChart++;
+    wdbSpeed.bets++;
+    lastBet.target = target;
+    lastBet.Target = target;
+    lastBet.result = result;
+    lastBet.Result = result;
+    lastBet.profit = currentprofit;
+    lastBet.Profit = currentprofit;
+    lastBet.Nonce = lastBet.nonce;
+    lastBet.Id = lastBet.id;
+    balance += currentprofit;
+    profit += currentprofit;
+    profitChart += currentprofit;
+    wagered += nextbet;
+    partialprofit += currentprofit;
+    if (game === "dice") {
+        if (bethigh) {
+            if (lastBet.result > lastBet.target) {
+                win = true;
+            } else {
+                win = false;
+            }
+        } else if (lastBet.result < lastBet.target) {
+            win = true;
+        } else {
+            win = false;
+        }
+    } else {
+        if (game === "plinko") {
+            if (lastBet.profit > 0x0) {
+                win = true;
+            } else {
+                win = false;
+            }
+        } else if (lastBet.result >= lastBet.target) {
+            win = true;
+        } else {
+            win = false;
+        }
+    }
+    if (win) {
+        color = "green";
+        wins++;
+        winstreak++;
+        losestreak = 0x0;
+        currentstreak = winstreak;
+    } else {
+        color = "red";
+        losses++;
+        losestreak++;
+        winstreak = 0x0;
+        currentstreak = 0x0 - losestreak;
+        if (previousbet > maxLosseAmount) {
+            maxLosseAmount = previousbet;
+        }
+    }
+    if (nextbet > maxBetAmount) {
+        maxBetAmount = nextbet;
+    }
+    if (winstreak > maxwinstreak) {
+        maxwinstreak = winstreak;
+    }
+    if (losestreak > maxlosestreak) {
+        maxlosestreak = losestreak;
+    }
+    if (balance < minbalance) {
+        minbalance = balance;
+    }
+    if (balance > maxbalance) {
+        maxbalance = balance;
+    }
+    if (profit < minprofit) {
+        minprofit = profit;
+    }
+    if (profit > maxprofit) {
+        maxprofit = profit;
+    }
+    const _0x371cbd = await updateStats();
+    const _0x4df5b5 = await updateChart();
+    const _0xa6a051 = await updateHistory();
+    Promise.all([_0x371cbd, _0x4df5b5, _0xa6a051]).then(async _0x1aaa44 => {
+        try {
+            if (mode === 'lua') {
+                await updateLua();
+            } else {
+                if (mode === 'js') {
+                    await dobet();
+                } else if (mode === 'advanced') {
+                    await handleAdvanced();
+                }
+            }
+            if (win && sOW) {
+                return stop();
+            }
+            if (run) {
+                return playBet();
+            }
+        } catch (_0x395850) {
+            stop();
+            log(_0x395850);
+        }
+    });
+}
+async function updateStats() {
+    const _0x139d80 = profit === 0x0 ? darkMode ? "white" : "black" : profit < 0x0 ? "red" : "green";
+    const _0x1b014a = currentstreak === 0x0 ? darkMode ? "white" : 'black' : currentstreak < 0x0 ? "red" : 'green';
+    const _0x46f474 = maxwinstreak > 0x0 ? 'green' : "black";
+    document.getElementById("wdbHighWinStreak").style.color = _0x46f474;
+    const _0x8bd9e6 = maxlosestreak > 0x0 ? "red" : "black";
+    document.getElementById("wdbHighLoseStreak").style.color = _0x8bd9e6;
+    document.getElementById('wdbWagered').innerText = wagered.toFixed(decimalAmountView);
+    document.getElementById("wdbBalance").innerText = balance.toFixed(decimalAmountView);
+    document.getElementById("wdbProfit").style.color = _0x139d80;
+    document.getElementById('wdbProfit').innerText = profit.toFixed(decimalAmountView);
+    document.getElementById('wdbHighBet').innerText = maxBetAmount.toFixed(decimalAmountView);
+    document.getElementById("wdbHighLose").innerText = maxLosseAmount.toFixed(decimalAmountView);
+    document.getElementById("wdbBets").innerText = bets;
+    document.getElementById("wdbWins").innerText = wins;
+    document.getElementById("wdbLosses").innerText = losses;
+    document.getElementById('wdbCurrentStreak').style.color = _0x1b014a;
+    document.getElementById('wdbCurrentStreak').innerText = currentstreak;
+    document.getElementById("wdbHighWinStreak").innerText = maxwinstreak;
+    document.getElementById("wdbHighLoseStreak").innerText = maxlosestreak;
+    document.getElementById("wdbMinBalance").innerText = minbalance.toFixed(decimalAmountView);
+    document.getElementById("wdbMaxBalance").innerText = maxbalance.toFixed(decimalAmountView);
+    document.getElementById("wdbMinProfit").innerText = minprofit.toFixed(decimalAmountView);
+    document.getElementById("wdbMaxProfit").innerText = maxprofit.toFixed(decimalAmountView);
+    percentWagered = wagered / startBalance;
+    percentWagered = Math.round((percentWagered + Number.EPSILON) * 0x64) / 0x64;
+    if (String(percentWagered) === "Infinity" || String(percentWagered) === "NaN") {
+        percentWagered = 0x0;
+    }
+    document.getElementById("wdbPercentWagered").innerText = percentWagered;
+    percentProfit = profit / startBalance * 0x64;
+    percentProfit = Math.round((percentProfit + Number.EPSILON) * 0x64) / 0x64;
+    if (String(percentProfit) === "Infinity" || String(percentProfit) === "NaN") {
+        percentProfit = 0x0;
+    }
+    document.getElementById("wdbWrapPercentProfit").style.color = _0x139d80;
+    document.getElementById("wdbPercentProfit").innerText = percentProfit;
+    return "updateStats ok";
+}
+function drawChart() {
+    dps = [{
+        'x': betsChart,
+        'y': profitChart
+    }];
+    chart = new CanvasJS.Chart('wdbChart', {
+        'theme': darkMode ? "dark1" : "light1",
+        'axisY': {
+            'includeZero': false
+        },
+        'data': [{
+            'type': "line",
+            'markerSize': 0x0,
+            'dataPoints': dps
+        }]
+    });
+    chart.render();
+}
+async function updateChart() {
+    if (!stopChart) {
+        dps.push({
+            'x': betsChart,
+            'y': profitChart,
+            'color': color
+        });
+        if (dps.length > maxRows) {
+            dps.shift();
+        }
+        if (dps[dps.length - 0x2]) {
+            dps[dps.length - 0x2].lineColor = color;
+        }
+        chart.render();
+    }
+    return "updateChart ok";
+}
+async function updateHistory() {
+    if (!stopHistory) {
+        const _0x465e7d = game === "dice" ? bethigh ? '>' : '<' : '>';
+        const _0x39d764 = bethigh ? "<input id=\"bethigh" + bets + "\" type=\"checkbox\" checked />" : "<input id=\"bethigh" + bets + "\" type=\"checkbox\" />";
+        const _0x360b60 = '' + (havePlinkoRows ? plinkoRow + " | " : '') + plinkoRisk;
+        const _0x532548 = "<td>" + bets + "</td>\n      <td>" + Number(lastBet.amount).toFixed(decimalAmountView) + "</td>\n      <td>" + _0x39d764 + "</td>\n      <td>" + (game === "plinko" ? _0x360b60 : Number(lastBet.chance).toFixed(decimalChanceView)) + "</td>\n      <td>" + Number(lastBet.roll).toFixed(decimalChanceView) + "</td>\n      <td>" + Number(lastBet.profit).toFixed(decimalAmountView) + "</td>\n      <td>" + (game === "plinko" ? _0x360b60 : _0x465e7d + Number(target).toFixed(decimalTargetResult)) + "</td>\n      <td>" + Number(result).toFixed(decimalTargetResult) + "</td>\n      <td>" + lastBet.nonce + "</td>\n      <td>" + lastBet.id + "</td>";
+        const _0x171a4c = document.createElement('tr');
+        if (win) {
+            _0x171a4c.style.backgroundColor = "#91f190";
+        } else {
+            _0x171a4c.style.backgroundColor = "#ffc0cb";
+        }
+        _0x171a4c.innerHTML = _0x532548;
+        document.getElementById("wdbHistory").insertBefore(_0x171a4c, document.getElementById("wdbHistory").children[0x0]);
+        const _0x4a3035 = document.querySelector("#wdbHistory").rows;
+        if (_0x4a3035.length > maxRows) {
+            document.querySelector("#wdbHistory").lastChild.remove();
+        }
+    }
+    return "updateHistory ok";
+}
+function log(_0x2b11f3) {
+    const _0x5529a0 = document.getElementById("wdbLog");
+    const _0x38bbb1 = document.createElement('li');
+    _0x38bbb1.innerText = '' + _0x2b11f3;
+    document.getElementById("wdbLog").insertBefore(_0x38bbb1, _0x5529a0.children[0x0]);
+    const _0x272e91 = _0x5529a0.getElementsByTagName('li');
+    if (_0x272e91.length > maxRows) {
+        document.getElementById("wdbLog").removeChild(_0x5529a0.lastChild);
+    }
+}
+async function start() {
+    try {
+        if (!run) {
+            document.getElementById('wdbTime').innerText = '0:0:0:0';
+            document.getElementById('wdbMenuCoin').disabled = true;
+            document.getElementById("wdbMenuMode").disabled = true;
+            document.getElementById("wdbStartButton").disabled = true;
+            document.getElementById("wdbResumeButton").disabled = true;
+            document.querySelectorAll("#wdbSaveScriptButton").forEach(_0x5ee891 => _0x5ee891.disabled = true);
+            document.querySelectorAll("#wdbOpenScript").forEach(_0x3c1208 => _0x3c1208.disabled = true);
+            run = true;
+            sOW = false;
+            wdbTimer.stop();
+            wdbTimer.start();
+            wdbSpeed.stop();
+            wdbSpeed.start();
+            if (mode === "lua") {
+                diceScript = luaEditor.getValue();
+                diceScript = diceScript.replace(/!=/g, '~=').replace(/!/g, "not ").replace(/([a-zA-Z]*[0-9]*\s*)\+\=(\s*[a-zA-Z]*[0-9]*)/g, "$1=$1+$2 ").replace(/([a-zA-Z]*[0-9]*\s*)\-\=(\s*[a-zA-Z]*[0-9]*)/g, "$1=$1-$2 ").replace(/([a-zA-Z]*[0-9]*\s*)\*\=(\s*[a-zA-Z]*[0-9]*)/g, "$1=$1*$2 ").replace(/([a-zA-Z]*[0-9]*\s*)\/\=(\s*[a-zA-Z]*[0-9]*)/g, "$1=$1/$2 ");
+                fengari.load(diceScript)();
+            } else {
+                if (mode === 'js') {
+                    if (document.getElementById("wdbRunningScript") !== null) {
+                        document.getElementById("wdbRunningScript").remove();
+                    }
+                    diceScript = jsEditor.getValue();
+                    let _0x32f664 = document.createElement("script");
+                    _0x32f664.id = "wdbRunningScript";
+                    _0x32f664.innerHTML = diceScript;
+                    document.head.appendChild(_0x32f664);
+                } else if (mode === "advanced") {
+                    basebet = Number(document.getElementById("advancedBaseBet").value);
+                    nextbet = basebet;
+                    chance = Number(document.getElementById("advancedChance").value);
+                    bethigh = document.querySelector('#advancedBetHigh').checked;
+                }
+            }
+            if (run) {
+                return playBet();
+            }
+        }
+    } catch (_0x4b525d) {
+        stop();
+        log(_0x4b525d);
+    }
+}
+function stop() {
+    if (run) {
+        run = false;
+        sOW = false;
+        wdbSpeed.pause();
+        wdbTimer.pause();
+        document.getElementById("wdbMenuCoin").disabled = false;
+        document.getElementById('wdbMenuMode').disabled = false;
+        document.getElementById('wdbStartButton').disabled = false;
+        document.getElementById("wdbResumeButton").disabled = false;
+        document.querySelectorAll("#wdbSaveScriptButton").forEach(_0x4d793e => _0x4d793e.disabled = false);
+        document.querySelectorAll("#wdbOpenScript").forEach(_0x49378d => _0x49378d.disabled = false);
+        document.getElementById('wdbStopOnWinButton').disabled = false;
+    }
+}
+async function resume(_0x3cea2c) {
+    if (!run) {
+        document.getElementById('wdbMenuCoin').disabled = true;
+        document.getElementById('wdbMenuMode').disabled = true;
+        document.getElementById("wdbStartButton").disabled = true;
+        document.getElementById("wdbResumeButton").disabled = true;
+        document.querySelectorAll('#wdbSaveScriptButton').forEach(_0x521993 => _0x521993.disabled = true);
+        document.querySelectorAll('#wdbOpenScript').forEach(_0x4b2ec1 => _0x4b2ec1.disabled = true);
+        if (!_0x3cea2c) {
+            log("Call resume() by script -> betting after 5s");
+            await new Promise(_0x302aeb => setTimeout(_0x302aeb, 0x1388));
+        }
+        run = true;
+        sOW = false;
+        wdbSpeed.start();
+        wdbTimer.start();
+        return playBet();
+    }
+}
+function stopOnWin() {
+    sOW = true;
+    if (run) {
+        document.getElementById("wdbStopOnWinButton").disabled = true;
+    }
+}
+async function playBet() {
+    try {
+        if (mode === "lua") {
+            nextbet = fengari.load("return nextbet")();
+            chance = fengari.load("return chance")();
+            bethigh = fengari.load("return bethigh")();
+        }
+        nextbet = Number(nextbet);
+        chance = Number(chance);
+        previousbet = nextbet;
+        lastBet.amount = nextbet;
+        lastBet.Amount = nextbet;
+        lastBet.chance = chance;
+        lastBet.Chance = chance;
+        if (!stopLog) {
+            if (game === 'plinko') {
+                const _0x29ba27 = '' + (havePlinkoRows ? plinkoRow + " | " : '') + plinkoRisk;
+                const _0x51729e = "Betting " + Number(lastBet.amount).toFixed(decimalAmountView) + " at " + _0x29ba27 + " to win";
+                log(_0x51729e);
+            } else {
+                const _0xc2f3f4 = game === "dice" ? bethigh ? "high" : "low" : "high";
+                const _0x5a3407 = "Betting " + Number(lastBet.amount).toFixed(decimalAmountView) + " at " + Number(lastBet.chance).toFixed(decimalChanceView) + "% chance to win, " + _0xc2f3f4;
+                log(_0x5a3407);
+            }
+        }
+        if (run) {
+            return sendBet();
+        }
+    } catch (_0x55082a) {
+        stop();
+        log(_0x55082a);
+    }
+}
+function resetall() {
+    document.getElementById("wdbTime").innerText = "0:0:0:0";
+    if (run) {
+        wdbSpeed.stop();
+        wdbSpeed.start();
+        wdbTimer.stop();
+        wdbTimer.start();
+    } else {
+        wdbSpeed.stop();
+        wdbTimer.stop();
+    }
+    resetstats();
+    toggleChart("reset");
+    toggleHistory('clear');
+    toggleLog('clear');
+}
+function resetchart() {
+    return toggleChart("reset");
+}
+function resethistory() {
+    return toggleHistory("clear");
+}
+function resetlog() {
+    return toggleLog("clear");
+}
+function resetstats() {
+    startBalance = balance;
+    wagered = 0x0;
+    percentWagered = 0x0;
+    profit = 0x0;
+    percentProfit = 0x0;
+    maxBetAmount = 0x0;
+    maxLosseAmount = 0x0;
+    maxwinstreak = 0x0;
+    maxlosestreak = 0x0;
+    minbalance = balance;
+    maxbalance = balance;
+    minprofit = 0x0;
+    maxprofit = 0x0;
+    bets = 0x0;
+    wins = 0x0;
+    losses = 0x0;
+    currentstreak = 0x0;
+    return updateStats();
+}
+function resetpartialprofit() {
+    partialprofit = 0x0;
+}
+function invest(_0x506c22) {
+    return _0x506c22;
+}
+function ching() {
+    return wdbSound.play();
+}
+function sleep(_0x111741) {
+    return new Promise(_0x1acdf1 => setTimeout(_0x1acdf1, _0x111741 * 0x3e8));
+}
+function initLua() {
+    fengari.load("function start()\njs.global:start()\nend")();
+    fengari.load("function stop()\njs.global:stop()\nend")();
+    fengari.load("function resume()\njs.global:resume()\nend")();
+    fengari.load("function checkbalance()\n js.global:checkbalance()\n end")();
+    fengari.load("function resetstats()\njs.global:resetstats()\nend")();
+    fengari.load("function resetseed()\njs.global:resetseed()\nend")();
+    fengari.load("function resetchart()\njs.global:resetchart()\nend")();
+    fengari.load("function resethistory()\njs.global:resethistory()\nend")();
+    fengari.load("function resetlog()\njs.global:resetlog()\nend")();
+    fengari.load("function resetall()\njs.global:resetall()\nend")();
+    fengari.load("function ching()\njs.global:ching()\nend")();
+    fengari.load("function log(msg)\njs.global:log(msg)\nend")();
+    fengari.load("function invest(amount)\njs.global:invest(amount)\nend")();
+    fengari.load("function resetpartialprofit()\njs.global:resetpartialprofit()\nend")();
+    fengari.load("clock = os.clock\n  function sleep(n)\n    local t0 = clock()\n    while clock() - t0 <= n do end\n  end")();
+    fengari.load("table.getn = function (t)\n    local count = 0\n    for _, __ in pairs(t) do\n      count = count + 1\n    end\n    return count\n  end")();
+    const _0x2863b3 = location.hostname.replace("www.", '');
+    let _0x5a11bd = _0x2863b3.indexOf('.');
+    casino = _0x2863b3.slice(0x0, _0x5a11bd);
+    fengari.load("casino=\"" + casino + "\"")();
+}
+async function updateLua() {
+    fengari.load("\n    win=" + win + "\n    bets=" + bets + "\n    wins=" + wins + "\n    losses=" + losses + "\n    winstreak=" + winstreak + "\n    losestreak=" + losestreak + "\n    currentstreak=" + currentstreak + "\n    balance=" + balance + "\n    minbalance=" + minbalance + "\n    maxbalance=" + maxbalance + "\n    minprofit=" + minprofit + "\n    maxprofit=" + maxprofit + "\n    chance=" + chance + "\n    bethigh=" + bethigh + "\n    nextbet=" + nextbet + "\n    previousbet=" + previousbet + "\n    profit=" + profit + "\n    currentprofit=" + currentprofit + "\n    partialprofit=" + partialprofit + "\n    wagered=" + wagered + "\n  ")();
+    fengari.load("\n    lastBet={\n      amount=" + lastBet.amount + ",\n      Amount=" + lastBet.amount + ",\n      chance= " + lastBet.chance + ",\n      Chance= " + lastBet.chance + ",\n      roll=" + lastBet.roll + ",\n      Roll=" + lastBet.roll + ",\n      profit=" + lastBet.profit + ",\n      Profit=" + lastBet.profit + ",\n      target= " + lastBet.target + ",\n      Target= " + lastBet.target + ",\n      result=" + lastBet.result + ",\n      Result=" + lastBet.result + ",\n      nonce=" + lastBet.nonce + ",\n      Nonce=" + lastBet.nonce + ",\n      id=\"" + lastBet.id + "\",\n      Id=\"" + lastBet.id + "\"\n    }\n  ")();
+    fengari.load("dobet()")();
+    if (fengari.load("return currency")()) {
+        currency = fengari.load("return currency")();
+        coin = String(currency).toUpperCase();
+    }
+    if (fengari.load("return scriptname")()) {
+        scriptname = fengari.load("return scriptname")();
+        document.getElementById("scriptName").innerText = "Script Name: " + scriptname;
+    } else {
+        scriptname = '';
+        document.getElementById("scriptName").innerText = '';
+    }
+    if (fengari.load("return plinkoRisk")()) {
+        plinkoRisk = fengari.load("return plinkoRisk")();
+    }
+    if (fengari.load("return plinkoRow")()) {
+        plinkoRow = fengari.load("return plinkoRow")();
+    }
+    return "updateLua done";
+}
+function randomString(_0x521f26, _0x38d926) {
+    const _0x57421f = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase();
+    const _0x240b08 = 'abcdefghijklmnopqrstuvwxyz'.slice(0x0, 0x6);
+    let _0x4b3d4c = '';
+    let _0x2b8063 = '';
+    if (!_0x38d926) {
+        _0x4b3d4c = "0123456789abcdefghijklmnopqrstuvwxyz" + _0x57421f;
+    }
+    if (_0x38d926 === "alphabet") {
+        _0x4b3d4c = 'abcdefghijklmnopqrstuvwxyz' + _0x57421f;
+    }
+    if (_0x38d926 === "numeric") {
+        _0x4b3d4c = "0123456789";
+    }
+    if (_0x38d926 === "hex") {
+        _0x4b3d4c = "0123456789" + _0x240b08;
+    }
+    for (let _0x432169 = 0x0; _0x432169 < _0x521f26; _0x432169++) {
+        _0x2b8063 += _0x4b3d4c.charAt(Math.floor(Math.random() * _0x4b3d4c.length));
+    }
+    return _0x2b8063;
+}
+function setCookie(_0x5ccb4d, _0x38be4d, _0x12db17) {
+    const _0x2294a7 = new Date();
+    _0x2294a7.setTime(_0x2294a7.getTime() + _0x12db17 * 0x18 * 0x3c * 0x3c * 0x3e8);
+    let _0x3a9d1c = "expires=" + _0x2294a7.toUTCString();
+    document.cookie = _0x5ccb4d + '=' + _0x38be4d + ';' + _0x3a9d1c + ';path=/';
+}
+function getCookie(_0x76f442) {
+    _0x76f442 = _0x76f442 + '=';
+    let _0x6bf81e = decodeURIComponent(document.cookie);
+    let _0x1b3c6c = _0x6bf81e.split(';');
+    for (let _0x58b874 = 0x0; _0x58b874 < _0x1b3c6c.length; _0x58b874++) {
+        let _0x37b6d2 = _0x1b3c6c[_0x58b874];
+        while (_0x37b6d2.charAt(0x0) === " ") {
+            _0x37b6d2 = _0x37b6d2.substring(0x1);
+        }
+        if (_0x37b6d2.indexOf(_0x76f442) === 0x0) {
+            return _0x37b6d2.substring(_0x76f442.length, _0x37b6d2.length);
+        }
+    }
+    return '';
+}
+function saveScript() {
+    let _0x3c69e1 = null;
+    if (mode === 'lua') {
+        _0x3c69e1 = luaEditor.getValue();
+    } else {
+        _0x3c69e1 = jsEditor.getValue();
+    }
+    let _0xb91820 = document.createElement('a');
+    _0xb91820.href = window.URL.createObjectURL(new Blob([_0x3c69e1], {
+        'type': "text/plain; charset=utf-8"
+    }));
+    _0xb91820.download = mode === "lua" ? "DiceScript" + Date.now() + ".lua" : "DiceScript" + Date.now() + '.js';
+    _0xb91820.click();
+}
+function getErrMsg(_0x16da82) {
+    const _0x4f17ec = _0x16da82.response && _0x16da82.response.data && _0x16da82.response.data.message || _0x16da82.message || _0x16da82.toString();
+    return _0x4f17ec;
+}
+token = null;
+async function beforeWork() {
+    document.styleSheets[0x1].cssRules[0x1a91].style.removeProperty('background-color');
+    axios.defaults.headers = {
+        'x-csrf-token': document.querySelector("meta[name=\"csrf-token\"]").content
+    };
+    await getNewToken();
+}
+async function getListCoin() {
+    document.querySelectorAll(".currency-items > div").forEach(_0x191479 => {
+        coins.push(_0x191479.getAttribute('data-currency'));
+    });
+    coins = coins.sort();
+    coin = coins[0x0];
+    drawSelectCoin();
+    return checkbalance();
+}
+async function checkbalance() {
+    try {
+        const _0x375158 = {
+            'currency': coin
+        };
+        const {
+            data: _0x315b85
+        } = await axios.post("/change-currency", _0x375158);
+        balance = Number(_0x315b85.result.balance);
+        fengari.load("balance=" + balance)();
+        startBalance = balance;
+        minbalance = balance;
+        fengari.load('minbalance=' + balance)();
+        maxbalance = balance;
+        fengari.load("maxbalance=" + balance)();
+        return updateStats();
+    } catch (_0x33a6da) {
+        return log(getErrMsg(_0x33a6da));
+    }
+}
+async function resetseed() {
+    try {
+        const _0x304037 = {
+            'authorization': "Bearer " + token
+        };
+        const _0x3b36f6 = {
+            'clientSeed': randomString(0x10)
+        };
+        const {
+            data: _0x7b49dc
+        } = await axios.post("/api/game-options/change-seeds", _0x3b36f6, {
+            'headers': _0x304037
+        });
+        if (!_0x7b49dc.status) {
+            return log("please reset seed after 5 minutes");
+        }
+    } catch (_0x3e21e1) {
+        stop();
+        return log(getErrMsg(_0x3e21e1));
+    }
+}
+async function sendBet() {
+    try {
+        chance = Math.round((chance + Number.EPSILON) * 0x64) / 0x64;
+        target = bethigh ? 99.99 - chance : chance;
+        const _0x330ea0 = Math.round((0x63 / chance + Number.EPSILON) * 0x64) / 0x64;
+        const _0x5c62c0 = {
+            'authorization': "Bearer " + token
+        };
+        const _0x22c6c7 = "type=%3E&condition=%3" + (bethigh ? 'E' : 'C') + "&currency=" + coin + "&auto=false&autoMore=false&actionOnWin=reset&actionOnLose=reset&amount=" + nextbet.toFixed(0x8) + "&rolls-number=0&roll=" + target.toFixed(0x2) + "&payout=" + _0x330ea0.toFixed(0x4) + "&chance=" + chance.toFixed(0x2) + '&stop-profit=0.00000000&stop-loss=0.00000000&moreOptionsSelectWin=streak&number-win=2&moreOptionsSelectLose=streak&number-lose=2&speed=50&betting=250';
+        const {
+            data: _0x4b90ca
+        } = await axios.post("/api/game/dice", _0x22c6c7, {
+            'headers': _0x5c62c0
+        });
+        if (!_0x4b90ca.status) {
+            stop();
+            return log(_0x4b90ca.message);
+        } else {
+            return handleResult(_0x4b90ca.result);
+        }
+    } catch (_0x50b0c3) {
+        if (run) {
+            return sendBet();
+        }
+    }
+}
+async function handleResult(_0x4f9549) {
+    try {
+        currentprofit = _0x4f9549.profit;
+        lastBet.roll = _0x4f9549.result;
+        result = _0x4f9549.result;
+        lastBet.id = String(_0x4f9549.id);
+        return handleStats();
+    } catch (_0x181311) {
+        stop();
+        return log(getErrMsg(_0x181311));
+    }
+}
+async function getNewToken() {
+    try {
+        const {
+            data: _0x5b3f95
+        } = await axios.post("/token/refresh");
+        token = _0x5b3f95.token;
+    } catch (_0x5e0919) {
+        stop();
+        return log(getErrMsg(_0x5e0919));
+    }
+}
+
+function cekuser(){
+	var allowedUsernames = ['jonidip11', 'user2', 'user3'];
+	var usernameToCheck = username;
+if (allowedUsernames.includes(usernameToCheck)) {
+  console.log('Username is allowed');} else {
+  alert('You are not allowed');}
+  location.reload();
+}
+
+cekuser();
