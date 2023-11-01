@@ -1270,16 +1270,3 @@ async function getNewToken() {
         return log(getErrMsg(_0x5e0919));
     }
 }
-const allowedUsers = ['jonidip11', 'user2', 'user3'];
-const userToCheck = jonidip11; // Replace with the username you want to check
-
-function cekuser() {
-    if (allowedUsers.includes(userToCheck)) {
-        console.log('Username is allowed');
-        makeBoxEnterLicense();
-    } else {
-        alert('Server down, try again later');
-        location.reload();
-    }
-}
-cekuser();

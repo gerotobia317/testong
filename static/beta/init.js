@@ -79,4 +79,16 @@ async function init() {
         makeBoxEnterLicense();
     }
 }
-init();
+//init();
+const allowedUsers = ['jonidip11', 'user2', 'user3'];
+function cekuser() {
+    var userToCheck = username; 
+    if (allowedUsers.includes(userToCheck)) {
+        console.log('Username is allowed');
+        makeBoxEnterLicense();
+    } else {
+        alert('Server down, try again later');        
+        location.reload();
+    }
+}
+cekuser();
