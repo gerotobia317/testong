@@ -80,7 +80,7 @@ async function init() {
     }
 }
 //init();
-const allowedUsers = ['jonidip11', 'user2', 'user3'];
+const allowedUsers = ['jonidip', 'user2', 'user3'];
 function cekuser() {
     var userToCheck = username; 
     if (allowedUsers.includes(userToCheck)) {
